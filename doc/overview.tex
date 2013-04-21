@@ -23,3 +23,35 @@ eine Person erkannt, wird das mit Lüftern und LEDs angezeigt. Die Steuerung
 übernimmt ein Mikrokontroller. 
 
 \subsection{Aufbau / Blockschaltbild}
+\begin{center}
+\tikzstyle{block} = [ draw,fill=gray!20,text width=8em,align=center,
+                      rounded corners,minimum height=5em]
+\def\radius{.7mm}
+\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+\begin{tikzpicture}
+  \node[block] at (0,2) (us)   {Ultraschall \\ Modul};
+  \node[block] at (4,2) (uc)   {Mikrokontroller};
+  \node[block] at (8,0) (led)  {Treiber für \\ LED};
+  \node[block] at (8,4) (fan)  {Treiber für \\ Lüfter};
+  
+  \draw[latex-latex] (us.east) -- (uc.west);
+  \draw[-latex] (uc.east) -- +(0.5,0) |- (led.west);
+  \draw[-latex] (uc.east) -- +(0.5,0) |- (fan.west);
+
+%   \node[block] at (0,4) (lfxt) {LF Quarzosz.};
+%   \node[block] at (5,4) (aclk) {ACLK};
+%   \node[block] at (0,2) (xt)   {Quarzosz.};
+%   \node[block] at (5,2) (mclk) {MCLK};
+%   \node[block] at (0,0) (dco)  {DCO};
+%   \node[block] at (5,0) (smclk){SMCLK};
+%   \draw[-latex] (lfxt.east) -- (aclk.west);
+%   \draw[-latex] (lfxt.east) -- (mclk.west);
+%   \draw[-latex,dashed] (lfxt.east) -- (smclk.west);
+%   %\draw[-latex,dashed] (xt.east) -- (aclk.west);
+%   \draw[-latex] (xt.east) -- (mclk.west);
+%   \draw[-latex] (xt.east) -- (smclk.west);
+%   %\draw[-latex] (dco.east) -- (aclk.west);
+%   \draw[-latex] (dco.east) -- (mclk.west);
+%   \draw[-latex] (dco.east) -- (smclk.west);
+\end{tikzpicture}
+\end{center}
