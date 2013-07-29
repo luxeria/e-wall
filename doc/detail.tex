@@ -14,42 +14,9 @@
 %GNU General Public License for more details.
 %----------------------------------------
 
-\documentclass[a4paper,
-               10pt,
-               fleqn]{article}
+\section{Detailkonzept}
 
-\author{Ervin Mazlagi\'c, Daniel Winz}
-\title{E-Wall}
+\subsection{Distanzmessung}
+Die Distanzmessung erfolgt mittels eines Ultraschallsensors vom Typ HC-SR04. 
 
-\usepackage{luxpaper}
-\usepackage{luxtitle}
- 
-\begin{document}
-\luxtitle{Papers}
-         {E-Wall}
-         {Ervin Mazlagi\'c, Daniel Winz}
-         {Adligenswil}
-         {2013}
-
-\tableofcontents
-\newpage
-
-\include{einleitung}
-
-% \part{Allgemeines}
-
-\part{Dokumentation}
-\include{anforderungen}
-
-\include{overview}
-\include{detail}
-
-\begin{appendix}
-    \clearpage
-    \pagenumbering{roman}
-    \newpage
-
-\end{appendix}
-
-\end{document}
-
+\subsection{Ansteuerung Lüfter / LED}
