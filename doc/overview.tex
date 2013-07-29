@@ -20,7 +20,7 @@
 Die Erkennung von Personen erfolgt mittels Ultraschall. Dabei wird die Laufzeit 
 eines Signals gemessen und daraus die Anwesenheit von Personen bestimmt. Wird 
 eine Person erkannt, wird das mit Lüftern und LEDs angezeigt. Die Steuerung 
-übernimmt ein Mikrokontroller. 
+übernimmt ein Mikrocontroller. 
 
 \subsection{Aufbau / Blockschaltbild}
 \begin{center}
@@ -30,7 +30,7 @@ eine Person erkannt, wird das mit Lüftern und LEDs angezeigt. Die Steuerung
 \tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
 \begin{tikzpicture}
   \node[block] at (0,2) (us)   {Ultraschall \\ Modul};
-  \node[block] at (4,2) (uc)   {Mikrokontroller};
+  \node[block] at (4,2) (uc)   {Mikrocontroller};
   \node[block] at (8,0) (led)  {Treiber für \\ LED};
   \node[block] at (8,4) (fan)  {Treiber für \\ Lüfter};
   \node[block] at (12,1) (led1)  {LED};
