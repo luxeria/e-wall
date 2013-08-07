@@ -515,9 +515,9 @@ Based on the following sources:
 </classes>
 <parts>
 <part name="U$1" library="msp430launchpad" deviceset="MSP430LAUNCHPAD_FULL" device=""/>
-<part name="IC1" library="74xx-eu" deviceset="74*595" device="D" technology="HC"/>
-<part name="IC2" library="74xx-eu" deviceset="74*595" device="D" technology="HC"/>
-<part name="IC3" library="74xx-eu" deviceset="74*595" device="D" technology="HC"/>
+<part name="IC1" library="74xx-eu" deviceset="74*595" device="D" technology="HCT" value="74HCT595D"/>
+<part name="IC2" library="74xx-eu" deviceset="74*595" device="D" technology="HCT" value="74HCT595D"/>
+<part name="IC3" library="74xx-eu" deviceset="74*595" device="D" technology="HCT" value="74HCT595D"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
