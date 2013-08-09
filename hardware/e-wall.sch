@@ -828,6 +828,27 @@ include  Type MT6; con-amp-mt6.lbr&lt;p&gt;
 <sheets>
 <sheet>
 <plain>
+<wire x1="180.34" y1="0" x2="185.42" y2="-5.08" width="0.1524" layer="97" curve="90"/>
+<wire x1="185.42" y1="-5.08" x2="246.38" y2="-5.08" width="0.1524" layer="97"/>
+<wire x1="246.38" y1="-5.08" x2="251.46" y2="-10.16" width="0.1524" layer="97" curve="-90"/>
+<wire x1="251.46" y1="-10.16" x2="256.54" y2="-5.08" width="0.1524" layer="97" curve="-90"/>
+<wire x1="256.54" y1="-5.08" x2="317.5" y2="-5.08" width="0.1524" layer="97"/>
+<wire x1="317.5" y1="-5.08" x2="322.58" y2="0" width="0.1524" layer="97" curve="90"/>
+<wire x1="325.12" y1="0" x2="330.2" y2="-5.08" width="0.1524" layer="97" curve="90"/>
+<wire x1="330.2" y1="-5.08" x2="391.16" y2="-5.08" width="0.1524" layer="97"/>
+<wire x1="391.16" y1="-5.08" x2="396.24" y2="-10.16" width="0.1524" layer="97" curve="-90"/>
+<wire x1="396.24" y1="-10.16" x2="401.32" y2="-5.08" width="0.1524" layer="97" curve="-90"/>
+<wire x1="401.32" y1="-5.08" x2="462.28" y2="-5.08" width="0.1524" layer="97"/>
+<wire x1="462.28" y1="-5.08" x2="467.36" y2="0" width="0.1524" layer="97" curve="90"/>
+<text x="243.84" y="-15.24" size="1.778" layer="97">Treiber für LED</text>
+<text x="388.62" y="-15.24" size="1.778" layer="97">Treiber für Lüfter</text>
+<wire x1="165.1" y1="0" x2="160.02" y2="-5.08" width="0.1524" layer="97" curve="-90"/>
+<wire x1="160.02" y1="-5.08" x2="142.24" y2="-5.08" width="0.1524" layer="97"/>
+<wire x1="142.24" y1="-5.08" x2="137.16" y2="-10.16" width="0.1524" layer="97" curve="90"/>
+<wire x1="137.16" y1="-10.16" x2="132.08" y2="-5.08" width="0.1524" layer="97" curve="90"/>
+<wire x1="132.08" y1="-5.08" x2="114.3" y2="-5.08" width="0.1524" layer="97"/>
+<wire x1="114.3" y1="-5.08" x2="109.22" y2="0" width="0.1524" layer="97" curve="-90"/>
+<text x="129.54" y="-15.24" size="1.778" layer="97">Schieberegister</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="78.74" y="60.96"/>
