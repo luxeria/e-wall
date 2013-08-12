@@ -8,3 +8,6 @@ e-wall.pdf
 *.l#*
 *.s#*
 *.b#*
+
+# datasheets
+datasheets
