@@ -4653,6 +4653,120 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 <text x="-2.54" y="3.048" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.54" y="-3.302" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+<package name="TO18V">
+<description>&lt;b&gt;TO-18&lt;/b&gt;</description>
+<wire x1="-2.2098" y1="-0.9693" x2="2.2098" y2="-0.9693" width="0.0508" layer="21" curve="132.632"/>
+<wire x1="-0.9693" y1="2.2098" x2="0.9693" y2="2.2098" width="0.0508" layer="51" curve="-47.3681"/>
+<wire x1="-2.2098" y1="0.9693" x2="-2.2098" y2="-0.9693" width="0.0508" layer="51" curve="47.3681"/>
+<wire x1="-2.2098" y1="0.9693" x2="-0.9693" y2="2.2098" width="0.0508" layer="21" curve="-42.6319"/>
+<wire x1="2.2098" y1="-0.9693" x2="2.2098" y2="0.9693" width="0.0508" layer="51" curve="47.3681"/>
+<wire x1="1.649" y1="-2.411" x2="2.413" y2="-3.175" width="0.1524" layer="21"/>
+<wire x1="2.411" y1="-1.649" x2="3.175" y2="-2.413" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="-3.175" x2="3.175" y2="-2.413" width="0.1524" layer="21"/>
+<wire x1="0.9693" y1="2.2098" x2="2.2098" y2="0.9693" width="0.0508" layer="21" curve="-42.6319"/>
+<circle x="0" y="0" radius="2.921" width="0.1524" layer="21"/>
+<pad name="1" x="1.905" y="0" drill="0.8128" shape="octagon"/>
+<pad name="2" x="0" y="-1.905" drill="0.8128" shape="octagon"/>
+<pad name="3" x="-1.905" y="0" drill="0.8128" shape="octagon"/>
+<text x="3.302" y="0.381" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="3.302" y="-1.27" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="1.016" y="0.762" size="1.27" layer="51" ratio="10">1</text>
+<text x="-0.508" y="-1.27" size="1.27" layer="51" ratio="10">2</text>
+<text x="-1.905" y="0.635" size="1.27" layer="51" ratio="10">3</text>
+</package>
+<package name="TO92/">
+<description>&lt;b&gt;TO-92&lt;/b&gt;&lt;p&gt;
+grid 2.54 mm&lt;p&gt;
+rotated 45 deg.</description>
+<wire x1="-2.649" y1="0.314" x2="0.314" y2="-2.649" width="0.1524" layer="21"/>
+<wire x1="-1.1494" y1="2.4066" x2="1.1494" y2="2.4066" width="0.1524" layer="21" curve="-51.0586"/>
+<wire x1="-0.557" y1="0.377" x2="0.377" y2="-0.557" width="0.1524" layer="21"/>
+<wire x1="-2.4066" y1="1.1494" x2="-1.1494" y2="2.4066" width="0.1524" layer="51" curve="-38.9414"/>
+<wire x1="-2.649" y1="0.314" x2="-2.4071" y2="1.1498" width="0.1524" layer="21" curve="-18.7765"/>
+<wire x1="-1.974" y1="1.794" x2="-0.557" y2="0.377" width="0.1524" layer="51"/>
+<wire x1="2.4066" y1="-1.1494" x2="2.4066" y2="1.1494" width="0.1524" layer="21" curve="51.0586"/>
+<wire x1="1.1494" y1="-2.4066" x2="2.4066" y2="-1.1494" width="0.1524" layer="51" curve="38.9414"/>
+<wire x1="0.377" y1="-0.557" x2="1.794" y2="-1.974" width="0.1524" layer="51"/>
+<wire x1="0.314" y1="-2.649" x2="1.1498" y2="-2.4071" width="0.1524" layer="21" curve="18.7765"/>
+<wire x1="1.1494" y1="2.4066" x2="2.4066" y2="1.1494" width="0.1524" layer="51" curve="-38.9414"/>
+<pad name="3" x="-1.27" y="1.27" drill="0.8128" shape="octagon"/>
+<pad name="1" x="1.27" y="-1.27" drill="0.8128" shape="octagon"/>
+<pad name="2" x="1.27" y="1.27" drill="0.8128" shape="octagon"/>
+<text x="-2.54" y="3.048" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.54" y="-4.318" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="SOT89-ECB">
+<description>SOT98 Emitter Collector Basis</description>
+<wire x1="2.235" y1="-1.245" x2="-2.235" y2="-1.245" width="0.127" layer="51"/>
+<wire x1="2.235" y1="1.219" x2="2.235" y2="-1.245" width="0.127" layer="51"/>
+<wire x1="-2.235" y1="-1.245" x2="-2.235" y2="1.219" width="0.127" layer="51"/>
+<wire x1="-2.235" y1="1.219" x2="2.235" y2="1.219" width="0.127" layer="51"/>
+<wire x1="-0.7874" y1="1.5748" x2="-0.3556" y2="2.0066" width="0.1998" layer="51"/>
+<wire x1="-0.3556" y1="2.0066" x2="0.3556" y2="2.0066" width="0.1998" layer="51"/>
+<wire x1="0.3556" y1="2.0066" x2="0.7874" y2="1.5748" width="0.1998" layer="51"/>
+<wire x1="0.7874" y1="1.5748" x2="0.7874" y2="1.2954" width="0.1998" layer="51"/>
+<wire x1="0.7874" y1="1.2954" x2="-0.7874" y2="1.2954" width="0.1998" layer="51"/>
+<wire x1="-0.7874" y1="1.2954" x2="-0.7874" y2="1.5748" width="0.1998" layer="51"/>
+<smd name="E" x="-1.499" y="-1.981" dx="0.8" dy="1.4" layer="1"/>
+<smd name="B" x="1.499" y="-1.981" dx="0.8" dy="1.4" layer="1"/>
+<smd name="C" x="0" y="-1.727" dx="0.8" dy="1.9" layer="1" stop="no" cream="no"/>
+<text x="-2.54" y="3.175" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.4051" y="-4.3449" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.7272" y1="-2.1082" x2="-1.27" y2="-1.27" layer="51"/>
+<rectangle x1="1.27" y1="-2.1082" x2="1.7272" y2="-1.27" layer="51"/>
+<rectangle x1="-0.2794" y1="-2.1082" x2="0.2794" y2="-1.27" layer="51"/>
+<rectangle x1="-0.4" y1="-2.68" x2="0.4" y2="-1.28" layer="31"/>
+<rectangle x1="-0.5" y1="-2.78" x2="0.5" y2="-1.18" layer="29"/>
+<polygon width="0.1998" layer="51">
+<vertex x="-0.7874" y="1.3208"/>
+<vertex x="-0.7874" y="1.5748"/>
+<vertex x="-0.3556" y="2.0066"/>
+<vertex x="0.3048" y="2.0066"/>
+<vertex x="0.3556" y="2.0066"/>
+<vertex x="0.7874" y="1.5748"/>
+<vertex x="0.7874" y="1.2954"/>
+<vertex x="-0.7874" y="1.2954"/>
+</polygon>
+<polygon width="1.7" layer="29">
+<vertex x="-0.275" y="2.025"/>
+<vertex x="-0.275" y="-0.15"/>
+<vertex x="0.25" y="-0.15"/>
+<vertex x="0.25" y="2.025"/>
+</polygon>
+<polygon width="1.3" layer="31">
+<vertex x="-0.25" y="2.05"/>
+<vertex x="0.275" y="2.05"/>
+<vertex x="0.275" y="-0.125"/>
+<vertex x="-0.25" y="-0.125"/>
+</polygon>
+<polygon width="0.3" layer="1">
+<vertex x="0.25" y="-2.05"/>
+<vertex x="-0.25" y="-2.05"/>
+<vertex x="-0.25" y="-0.75" curve="-90"/>
+<vertex x="-0.875" y="-0.125"/>
+<vertex x="-0.875" y="2.05" curve="-90"/>
+<vertex x="-0.225" y="2.625"/>
+<vertex x="0.25" y="2.625" curve="-90"/>
+<vertex x="0.875" y="2.025"/>
+<vertex x="0.875" y="-0.125" curve="-90"/>
+<vertex x="0.25" y="-0.75"/>
+</polygon>
+</package>
+<package name="SOT23-BCE">
+<description>&lt;b&gt;SOT-23 (BCE)&lt;/b&gt;</description>
+<wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.6604" width="0.127" layer="51"/>
+<wire x1="1.4224" y1="-0.6604" x2="-1.4224" y2="-0.6604" width="0.127" layer="51"/>
+<wire x1="-1.4224" y1="-0.6604" x2="-1.4224" y2="0.6604" width="0.127" layer="51"/>
+<wire x1="-1.4224" y1="0.6604" x2="1.4224" y2="0.6604" width="0.127" layer="51"/>
+<smd name="E" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
+<smd name="C" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
+<smd name="B" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
+<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
+<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
+<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="NPN">
@@ -4672,6 +4786,25 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 <pin name="B" x="-2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 <pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" swaplevel="3" rot="R90"/>
 <pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" swaplevel="2" rot="R270"/>
+</symbol>
+<symbol name="PNP">
+<wire x1="2.0861" y1="1.6779" x2="1.5781" y2="2.5941" width="0.1524" layer="94"/>
+<wire x1="1.5781" y1="2.5941" x2="0.5159" y2="1.478" width="0.1524" layer="94"/>
+<wire x1="0.5159" y1="1.478" x2="2.0861" y2="1.6779" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="1.808" y2="2.1239" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="0.508" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="1.778" x2="1.524" y2="2.413" width="0.254" layer="94"/>
+<wire x1="1.524" y1="2.413" x2="0.762" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0.762" y1="1.651" x2="1.778" y2="1.778" width="0.254" layer="94"/>
+<wire x1="1.778" y1="1.778" x2="1.524" y2="2.159" width="0.254" layer="94"/>
+<wire x1="1.524" y1="2.159" x2="1.143" y2="1.905" width="0.254" layer="94"/>
+<wire x1="1.143" y1="1.905" x2="1.524" y2="1.905" width="0.254" layer="94"/>
+<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="5.08" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-2.54" x2="0.508" y2="2.54" layer="94"/>
+<pin name="B" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="E" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="C" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -5202,6 +5335,470 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="*-PNP-" prefix="T" uservalue="yes">
+<description>PNP Transistror</description>
+<gates>
+<gate name="G$1" symbol="PNP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="TO3" package="TO3">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO18-EBC" package="TO18">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name="2N2906"/>
+<technology name="2N2906A"/>
+<technology name="2N2907"/>
+<technology name="2N2907A"/>
+<technology name="2N3251"/>
+<technology name="2N3963"/>
+<technology name="BC177B"/>
+<technology name="BC393"/>
+<technology name="BCY70"/>
+<technology name="BCY79-IX"/>
+<technology name="BCY79-VII"/>
+<technology name="BCY79-VIII"/>
+<technology name="BSS74"/>
+<technology name="BSS75"/>
+<technology name="BSS76"/>
+</technologies>
+</device>
+<device name="TO18-" package="TO18-">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO18V" package="TO18V">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO202" package="TO202">
+<connects>
+<connect gate="G$1" pin="B" pad="3"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO202V" package="TO202V">
+<connects>
+<connect gate="G$1" pin="B" pad="3"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SOT93" package="SOT93">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SOT93V" package="SOT93V">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO126" package="TO126">
+<connects>
+<connect gate="G$1" pin="B" pad="3"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO126V" package="TO126V">
+<connects>
+<connect gate="G$1" pin="B" pad="3"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO218" package="TO218">
+<connects>
+<connect gate="G$1" pin="B" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="E" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO218V" package="TO218V">
+<connects>
+<connect gate="G$1" pin="B" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="E" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO220" package="TO220">
+<connects>
+<connect gate="G$1" pin="B" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="E" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO220V" package="TO220V">
+<connects>
+<connect gate="G$1" pin="B" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="E" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO225AA" package="TO225AA">
+<connects>
+<connect gate="G$1" pin="B" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="E" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO39-EBC" package="TO39">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name="2N2904"/>
+<technology name="2N2904A"/>
+<technology name="2N2905"/>
+<technology name="2N2905A"/>
+<technology name="2N3467"/>
+<technology name="2N3635"/>
+<technology name="2N3637"/>
+<technology name="2N4033"/>
+<technology name="2N5415"/>
+<technology name="2N5416"/>
+<technology name="BC160-16"/>
+<technology name="BC161-16"/>
+<technology name="MM4001"/>
+</technologies>
+</device>
+<device name="TO5" package="TO5">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO66" package="TO66">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO92" package="TO92">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO92-EBC" package="TO92-EBC">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name="BC327"/>
+<technology name="BC327-16"/>
+<technology name="BC327-25"/>
+<technology name="BC327-40"/>
+<technology name="BC328"/>
+<technology name="BC328-16"/>
+<technology name="BC328-25"/>
+<technology name="BC328-40"/>
+<technology name="BC448"/>
+<technology name="BC450"/>
+<technology name="BC488"/>
+<technology name="BC490"/>
+<technology name="BC516"/>
+<technology name="BC556A"/>
+<technology name="BC556B"/>
+<technology name="BC557A"/>
+<technology name="BC557B"/>
+<technology name="BC557C"/>
+<technology name="BC558A"/>
+<technology name="BC558B"/>
+<technology name="BC558C"/>
+<technology name="BC559A"/>
+<technology name="BC559B"/>
+<technology name="BC559C"/>
+<technology name="BC560C"/>
+<technology name="BCX58"/>
+<technology name="BCX59"/>
+<technology name="BCX79"/>
+</technologies>
+</device>
+<device name="TO92-E1" package="TO92-E1">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="1"/>
+<connect gate="G$1" pin="E" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO92/" package="TO92/">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO92L" package="TO92L">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TOP3" package="TOP3">
+<connects>
+<connect gate="G$1" pin="B" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="E" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TOP3V" package="TOP3V">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SOT23-BEC" package="SOT23-BEC">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name="BC807-16"/>
+<technology name="BC807-16LT1"/>
+<technology name="BC807-25"/>
+<technology name="BC807-25LT1"/>
+<technology name="BC807-40"/>
+<technology name="BC807-40LT1"/>
+<technology name="BC808-16"/>
+<technology name="BC808-25"/>
+<technology name="BC856A"/>
+<technology name="BC856ALT1"/>
+<technology name="BC856B"/>
+<technology name="BC856BLT1"/>
+<technology name="BC857A"/>
+<technology name="BC857ALT1"/>
+<technology name="BC857B"/>
+<technology name="BC857BLT1"/>
+<technology name="BC857C"/>
+<technology name="BC858A"/>
+<technology name="BC858ALT1"/>
+<technology name="BC858B"/>
+<technology name="BC858BLT1"/>
+<technology name="BC858C"/>
+<technology name="BC858CLT1"/>
+<technology name="BF821"/>
+<technology name="BF823"/>
+<technology name="MMBT2907ALT1"/>
+<technology name="MMBT3640LT1"/>
+<technology name="MMBT3906LT1"/>
+<technology name="MMBT4403LT1"/>
+<technology name="MMBT540LT1"/>
+<technology name="MMBT6520LT1"/>
+<technology name="MMBTA92LT1"/>
+<technology name="MMBTH81LT1"/>
+</technologies>
+</device>
+<device name="SOT23-EBC" package="SOT23-EBC">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SOT89-ECB" package="SOT89-ECB">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO92-BCE" package="TO92-BCE">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name="2SC1815"/>
+<technology name="BC369"/>
+<technology name="BC636"/>
+<technology name="BC638"/>
+<technology name="BC640"/>
+<technology name="BF421"/>
+<technology name="BF423"/>
+<technology name="MPSA56"/>
+</technologies>
+</device>
+<device name="TO92-CBE" package="TO92-CBE">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name="2N4126"/>
+<technology name="BF493S"/>
+<technology name="MPS2907A"/>
+<technology name="MPSA63"/>
+<technology name="MPSA64"/>
+<technology name="MPSW92"/>
+</technologies>
+</device>
+<device name="TO92-BEC" package="TO92-BEC">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO92-CEB" package="TO92-CEB">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name=""/>
+<technology name="BC237"/>
+<technology name="BC238"/>
+<technology name="BC239"/>
+<technology name="BF494"/>
+<technology name="BF495"/>
+</technologies>
+</device>
+<device name="SOT23-BCE" package="SOT23-BCE">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SOT98-BCE" package="SOT89-BCE">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name="BF621"/>
+<technology name="BF623"/>
+</technologies>
+</device>
+<device name="SC59-BEC" package="SC59-BEC">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name="MMUN2111LT1"/>
+<technology name="MMUN2112LT1"/>
+<technology name="MMUN2113LT1"/>
+<technology name="MMUN2114LT1"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -5328,6 +5925,9 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="GND28" library="supply1" deviceset="GND" device=""/>
 <part name="GND29" library="supply1" deviceset="GND" device=""/>
 <part name="P+28" library="supply1" deviceset="VCC" device=""/>
+<part name="T2" library="transistor" deviceset="*-PNP-" device="SOT23-EBC"/>
+<part name="R5" library="resistor" deviceset="R-EU_" device="R0805"/>
+<part name="GND30" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5492,7 +6092,10 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <instance part="T1" gate="G$1" x="35.56" y="66.04" rot="MR0"/>
 <instance part="GND28" gate="1" x="33.02" y="55.88"/>
 <instance part="GND29" gate="1" x="22.86" y="35.56"/>
-<instance part="P+28" gate="VCC" x="33.02" y="91.44"/>
+<instance part="P+28" gate="VCC" x="25.4" y="106.68"/>
+<instance part="T2" gate="G$1" x="27.94" y="96.52" rot="MR0"/>
+<instance part="R5" gate="G$1" x="25.4" y="81.28" rot="R90"/>
+<instance part="GND30" gate="1" x="25.4" y="71.12"/>
 </instances>
 <busses>
 <bus name="OUT0..23">
@@ -5704,6 +6307,11 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <pinref part="GND28" gate="1" pin="GND"/>
 <wire x1="33.02" y1="58.42" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="GND30" gate="1" pin="GND"/>
+<wire x1="25.4" y1="76.2" x2="25.4" y2="73.66" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$4" class="0">
 <segment>
@@ -5770,8 +6378,8 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 </segment>
 <segment>
 <pinref part="P+28" gate="VCC" pin="VCC"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="33.02" y1="88.9" x2="33.02" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="T2" gate="G$1" pin="E"/>
+<wire x1="25.4" y1="104.14" x2="25.4" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="OUT0" class="0">
@@ -6468,23 +7076,45 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <wire x1="53.34" y1="66.04" x2="50.8" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="TRIGGER" class="0">
-<segment>
-<pinref part="T1" gate="G$1" pin="C"/>
-<pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="33.02" y1="71.12" x2="33.02" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="73.66" x2="33.02" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="73.66" x2="2.54" y2="73.66" width="0.1524" layer="91"/>
-<junction x="33.02" y="73.66"/>
-<label x="5.08" y="73.66" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="ECHO" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="22.86" y1="66.04" x2="22.86" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="68.58" x2="2.54" y2="68.58" width="0.1524" layer="91"/>
 <label x="5.08" y="68.58" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$33" class="0">
+<segment>
+<pinref part="T1" gate="G$1" pin="B"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="38.1" y1="66.04" x2="40.64" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$34" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="T1" gate="G$1" pin="C"/>
+<wire x1="33.02" y1="76.2" x2="33.02" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$35" class="0">
+<segment>
+<pinref part="T2" gate="G$1" pin="B"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="30.48" y1="96.52" x2="33.02" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="96.52" x2="33.02" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="TRIGGER" class="0">
+<segment>
+<pinref part="T2" gate="G$1" pin="C"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="25.4" y1="91.44" x2="25.4" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="88.9" x2="25.4" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="88.9" x2="2.54" y2="88.9" width="0.1524" layer="91"/>
+<junction x="25.4" y="88.9"/>
+<label x="5.08" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
