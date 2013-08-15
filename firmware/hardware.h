@@ -39,24 +39,24 @@ Comment
 #define P1_1            BIT1    ///< |IRL|      unused
 #define P1_2            BIT2    ///< |IRL|      unused
 #define P1_3            BIT3    ///< |IRL|      unused
-#define P1_4            BIT4    ///< |OM|       SMCLK for Measurement of int. clock
-#define P1_5            BIT5    ///< |IRL|      unused
-#define P1_6            BIT6    ///< |OH|       green LED for "Hello World"
-#define P1_7            BIT7    ///< |IRL|      unused
+#define P1_4            BIT4    ///< |OL|       Load for shift registers
+#define P1_5            BIT5    ///< |OM|       SCK for shift registers
+#define P1_6            BIT6    ///< |IM|       SOMI for shift registers
+#define P1_7            BIT7    ///< |OM|       SIMO for shift registers
 
-#define P1OUT_INIT      (P1_6)
-#define P1SEL_INIT      (0)
-#define P1SEL2_INIT     (0)
-#define P1DIR_INIT      (P1_0 | P1_6)
-#define P1REN_INIT      (P1_1 | P1_2 | P1_3 | P1_4 | P1_5 | P1_7)
+#define P1OUT_INIT      (P1_4)
+#define P1SEL_INIT      (P1_5 | P1_6 | P1_7)
+#define P1SEL2_INIT     (P1_5 | P1_6 | P1_7)
+#define P1DIR_INIT      (P1_0 | P1_4)
+#define P1REN_INIT      (P1_1 | P1_2 | P1_3)
 
 #define P1IE_INIT       (0)     ///< disable irq
 #define P1IES_INIT      (0)     ///< H->L transition
 
 
 //--- PORT2 ---
-#define P2_0            BIT0    ///< |IRL|      unused
-#define P2_1            BIT1    ///< |IRL|      unused
+#define P2_0            BIT0    ///< |OL|       Trigger for Ultrasonic distance modul
+#define P2_1            BIT1    ///< |I|        Echo for Ultrasonic distance modul
 #define P2_2            BIT2    ///< |IRL|      unused
 #define P2_3            BIT3    ///< |IRL|      unused
 #define P2_4            BIT4    ///< |IRL|      unused
@@ -68,8 +68,8 @@ Comment
 #define P2OUT_INIT      (0)
 #define P2SEL_INIT      (0)
 #define P2SEL2_INIT     (0)
-#define P2DIR_INIT      (0)
-#define P2REN_INIT      (P2_0 | P2_1 | P2_2 | P2_3 | P2_4 | P2_5 | P2_6 | P2_7)
+#define P2DIR_INIT      (P2_0)
+#define P2REN_INIT      (P2_2 | P2_3 | P2_4 | P2_5 | P2_6 | P2_7)
 
 #define CAPD_INIT       (0)
 
