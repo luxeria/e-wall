@@ -10,4 +10,4 @@ e-wall.pdf
 *.b#*
 
 # datasheets
-datasheets
+datasheets/*.pdf
