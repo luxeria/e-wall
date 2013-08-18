@@ -1,3 +1,3 @@
-# /bin/bash
+#/bin/bash
+wget http://www.parallax.com/Portals/0/Downloads/docs/prod/datast/74HC_HCT595_4.pdf
 
-wget http://pdf.datasheetcatalog.com/datasheet/philips/74HC_HCT595_CNV_3.pdf
