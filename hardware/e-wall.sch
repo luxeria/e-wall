@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -47,7 +47,7 @@
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -5811,7 +5811,7 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 </class>
 </classes>
 <parts>
-<part name="U$1" library="msp430launchpad" deviceset="MSP430LAUNCHPAD_FULL" device=""/>
+<part name="U$1" library="msp430launchpad" deviceset="MSP430LAUNCHPAD_FULL" device="" value="Launchpad"/>
 <part name="IC1" library="74xx-eu" deviceset="74*595" device="D" technology="HCT" value="74HCT595D"/>
 <part name="IC2" library="74xx-eu" deviceset="74*595" device="D" technology="HCT" value="74HCT595D"/>
 <part name="IC3" library="74xx-eu" deviceset="74*595" device="D" technology="HCT" value="74HCT595D"/>
