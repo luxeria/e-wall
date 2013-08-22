@@ -5917,8 +5917,8 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="P+25" library="supply1" deviceset="+12V" device=""/>
 <part name="P+26" library="supply1" deviceset="+12V" device=""/>
 <part name="P+27" library="supply1" deviceset="+12V" device=""/>
-<part name="R1" library="resistor" deviceset="R-EU_" device="R0805"/>
-<part name="R2" library="resistor" deviceset="R-EU_" device="R0805"/>
+<part name="R1" library="resistor" deviceset="R-EU_" device="R0805" value="20k"/>
+<part name="R2" library="resistor" deviceset="R-EU_" device="R0805" value="30k"/>
 <part name="R3" library="resistor" deviceset="R-EU_" device="R0805"/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="R0805"/>
 <part name="T1" library="transistor" deviceset="*-NPN-" device="SOT23-EBC"/>
