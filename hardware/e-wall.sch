@@ -5919,17 +5919,17 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="P+27" library="supply1" deviceset="+12V" device=""/>
 <part name="R1" library="resistor" deviceset="R-EU_" device="R0805" value="20k"/>
 <part name="R2" library="resistor" deviceset="R-EU_" device="R0805" value="30k"/>
-<part name="R3" library="resistor" deviceset="R-EU_" device="R0805"/>
-<part name="R4" library="resistor" deviceset="R-EU_" device="R0805"/>
+<part name="R3" library="resistor" deviceset="R-EU_" device="R0805" value="110k"/>
+<part name="R4" library="resistor" deviceset="R-EU_" device="R0805" value="NB"/>
 <part name="T1" library="transistor" deviceset="*-NPN-" device="SOT23-EBC"/>
 <part name="GND28" library="supply1" deviceset="GND" device=""/>
 <part name="GND29" library="supply1" deviceset="GND" device=""/>
 <part name="P+28" library="supply1" deviceset="VCC" device=""/>
 <part name="T2" library="transistor" deviceset="*-PNP-" device="SOT23-EBC"/>
-<part name="R5" library="resistor" deviceset="R-EU_" device="R0805"/>
+<part name="R6" library="resistor" deviceset="R-EU_" device="R0805" value="4.7k"/>
 <part name="GND30" library="supply1" deviceset="GND" device=""/>
 <part name="P+29" library="supply1" deviceset="VCC" device=""/>
-<part name="R6" library="resistor" deviceset="R-EU_" device="R0805"/>
+<part name="R5" library="resistor" deviceset="R-EU_" device="R0805" value="6.2k"/>
 </parts>
 <sheets>
 <sheet>
@@ -6096,10 +6096,10 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <instance part="GND29" gate="1" x="10.16" y="35.56"/>
 <instance part="P+28" gate="VCC" x="17.78" y="93.98"/>
 <instance part="T2" gate="G$1" x="20.32" y="83.82" rot="MR0"/>
-<instance part="R5" gate="G$1" x="17.78" y="66.04" rot="R90"/>
+<instance part="R6" gate="G$1" x="17.78" y="66.04" rot="R90"/>
 <instance part="GND30" gate="1" x="17.78" y="55.88"/>
 <instance part="P+29" gate="VCC" x="33.02" y="91.44"/>
-<instance part="R6" gate="G$1" x="25.4" y="78.74" rot="R270"/>
+<instance part="R5" gate="G$1" x="25.4" y="78.74" rot="R90"/>
 </instances>
 <busses>
 <bus name="OUT0..23">
@@ -6312,7 +6312,7 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <wire x1="33.02" y1="58.42" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="R6" gate="G$1" pin="1"/>
 <pinref part="GND30" gate="1" pin="GND"/>
 <wire x1="17.78" y1="58.42" x2="17.78" y2="60.96" width="0.1524" layer="91"/>
 </segment>
@@ -7105,16 +7105,16 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="T1" gate="G$1" pin="C"/>
 <wire x1="33.02" y1="73.66" x2="33.02" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="25.4" y1="73.66" x2="25.4" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="71.12" x2="33.02" y2="71.12" width="0.1524" layer="91"/>
 <junction x="33.02" y="71.12"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="25.4" y1="73.66" x2="25.4" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TRIGGER" class="0">
 <segment>
 <pinref part="T2" gate="G$1" pin="C"/>
-<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="17.78" y1="78.74" x2="17.78" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="73.66" x2="17.78" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="73.66" x2="-7.62" y2="73.66" width="0.1524" layer="91"/>
@@ -7125,7 +7125,7 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <net name="N$35" class="0">
 <segment>
 <pinref part="T2" gate="G$1" pin="B"/>
-<pinref part="R6" gate="G$1" pin="1"/>
+<pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="22.86" y1="83.82" x2="25.4" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
