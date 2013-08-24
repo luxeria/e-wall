@@ -27,5 +27,20 @@ Als Pegelwandler für Echo besteht aus einem Spannungsteiler. \\
 Als Querstrom werden $I_q = 100 \mu A$ definiert. 
 \[ R_1 = \frac{U_e - U_a}{I_q} = \frac{5 V - 3 V}{100 \mu A} = 20 k\Omega \]
 \[ R_2 = \frac{U_a}{I_q} = \frac{3 V}{100 \mu A} = 30 k\Omega \]
-
+Für Trigger besteht der Pegelwandler aus zwei Transistoren im 
+Emitterschaltung. 
+Der Treiber soll einen Strom von $20 mA$ treiben können. Der Querstrom 
+durch R6 wird auf $1 mA$ festgelegt. 
+\[ R_6 = \frac{U_{cc} - U_{CE}}{I_{R_6}} = \frac{5 V - 0.2 V}{1 mA} 
+= 4.8 k\Omega \Rightarrow 4.7 k\Omega \]
+\[ R_5 = \frac{U_{cc} - U_{CE} - U_{BE}}
+{\frac{ü \cdot (I_{trigg} + I_ {R_6})}{\beta}}
+= \frac{5 V - 0.2 V - 0.7 V}{\frac{3 \cdot (20 mA + 1 mA)}{100}} 
+= 6.5 k\Omega \Rightarrow 6.2 k\Omega \]
+$R_4$ wird nicht bestückt. 
+\[ I_{R_5} = \frac{U_{cc} - U_{CE} - U_{BE}}{R_5} 
+= \frac{5 V - 0.2 V - 0.7 V}{6.2 k\Omega} = 661 \mu A \]
+\[ R_3 = \frac{U_e - U_{BE}}{\frac{ü \cdot (I_{R_5} + I_{R_4})}{\beta}} 
+= \frac{3 V - 0.7 V}{\frac{3 \cdot (661 \mu A)}{100}} = 116 k\Omega 
+\Rightarrow 110 k\Omega \]
 \subsection{Treiber}
