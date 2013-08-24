@@ -3,6 +3,7 @@
 *.out
 *.toc
 e-wall.pdf
+*.swp
 
 # eagle backup files
 *.l#*
