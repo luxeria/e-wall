@@ -5921,11 +5921,11 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="R2" library="resistor" deviceset="R-EU_" device="R0805" value="30k"/>
 <part name="R3" library="resistor" deviceset="R-EU_" device="R0805" value="110k"/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="R0805" value="NB"/>
-<part name="T1" library="transistor" deviceset="*-NPN-" device="SOT23-EBC"/>
+<part name="T1" library="transistor" deviceset="*-NPN-" device="SOT23-EBC" value="BC547"/>
 <part name="GND28" library="supply1" deviceset="GND" device=""/>
 <part name="GND29" library="supply1" deviceset="GND" device=""/>
 <part name="P+28" library="supply1" deviceset="VCC" device=""/>
-<part name="T2" library="transistor" deviceset="*-PNP-" device="SOT23-EBC"/>
+<part name="T2" library="transistor" deviceset="*-PNP-" device="SOT23-EBC" value="BC557"/>
 <part name="R6" library="resistor" deviceset="R-EU_" device="R0805" value="4.7k"/>
 <part name="GND30" library="supply1" deviceset="GND" device=""/>
 <part name="P+29" library="supply1" deviceset="VCC" device=""/>
@@ -6091,11 +6091,17 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <instance part="R2" gate="G$1" x="10.16" y="45.72" rot="R90"/>
 <instance part="R3" gate="G$1" x="45.72" y="66.04"/>
 <instance part="R4" gate="G$1" x="33.02" y="78.74" rot="R90"/>
-<instance part="T1" gate="G$1" x="35.56" y="66.04" rot="MR0"/>
+<instance part="T1" gate="G$1" x="35.56" y="66.04" smashed="yes" rot="MR0">
+<attribute name="NAME" x="30.48" y="66.04" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="30.48" y="63.5" size="1.778" layer="96" rot="MR0"/>
+</instance>
 <instance part="GND28" gate="1" x="33.02" y="55.88"/>
 <instance part="GND29" gate="1" x="10.16" y="35.56"/>
 <instance part="P+28" gate="VCC" x="17.78" y="93.98"/>
-<instance part="T2" gate="G$1" x="20.32" y="83.82" rot="MR0"/>
+<instance part="T2" gate="G$1" x="20.32" y="83.82" smashed="yes" rot="MR0">
+<attribute name="NAME" x="15.24" y="83.82" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="15.24" y="81.28" size="1.778" layer="96" rot="MR0"/>
+</instance>
 <instance part="R6" gate="G$1" x="17.78" y="66.04" rot="R90"/>
 <instance part="GND30" gate="1" x="17.78" y="55.88"/>
 <instance part="P+29" gate="VCC" x="33.02" y="91.44"/>
