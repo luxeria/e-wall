@@ -56,7 +56,7 @@ Comment
 
 //--- PORT2 ---
 #define P2_0            BIT0    ///< |OL|       Trigger for Ultrasonic distance modul
-#define P2_1            BIT1    ///< |I|        Echo for Ultrasonic distance modul
+#define P2_1            BIT1    ///< |IM|       Echo for Ultrasonic distance modul
 #define P2_2            BIT2    ///< |IRL|      unused
 #define P2_3            BIT3    ///< |IRL|      unused
 #define P2_4            BIT4    ///< |IRL|      unused
@@ -66,7 +66,7 @@ Comment
 
 
 #define P2OUT_INIT      (0)
-#define P2SEL_INIT      (0)
+#define P2SEL_INIT      (P2_1)
 #define P2SEL2_INIT     (0)
 #define P2DIR_INIT      (P2_0)
 #define P2REN_INIT      (P2_2 | P2_3 | P2_4 | P2_5 | P2_6 | P2_7)
