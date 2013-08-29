@@ -1,6 +1,6 @@
 # makfile configuration
 
-NAME            = launchpad_hello
+NAME            = e-wall
 CSOURCES        = main.c hardware.c
 #~ ASOURCES        = 
 CPU             = msp430g2553
