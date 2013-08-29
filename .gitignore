@@ -10,5 +10,12 @@ e-wall.pdf
 *.s#*
 *.b#*
 
+# temporary files for mspgcc
+firmware/*.a43
+firmware/*.d
+firmware/*.elf
+firmware/*.lst
+firmware/*.o
+
 # datasheets
 datasheets/*.pdf
