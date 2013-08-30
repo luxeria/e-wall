@@ -17,6 +17,12 @@
 \section{Dimensionierung}
 
 \subsection{Speisung}
+Die Speisung wird mit einer Open Collector Stufe geschaltet. Da bei einem 
+Netzteil maximal $1.6 mA$ fliessen wird die Stufe für einen Strom von 
+$10 mA$ ausgelegt. 
+\[ R_7 = \frac{U_{cc} - U_{CE}}{\frac{ü \cdot I_{PON}}{\beta}} 
+= \frac{3 V - 0.7 V}{\frac{3 \cdot 10 mA}{100}} = 7.667 k\Omega 
+\Rightarrow 7.5 k\Omega \]
 
 \subsection{Pegelwandler}
 Als Pegelwandler für Echo besteht aus einem Spannungsteiler. \\
@@ -43,4 +49,5 @@ $R_4$ wird nicht bestückt.
 \[ R_3 = \frac{U_e - U_{BE}}{\frac{ü \cdot (I_{R_5} + I_{R_4})}{\beta}} 
 = \frac{3 V - 0.7 V}{\frac{3 \cdot (661 \mu A)}{100}} = 116 k\Omega 
 \Rightarrow 110 k\Omega \]
+
 \subsection{Treiber}

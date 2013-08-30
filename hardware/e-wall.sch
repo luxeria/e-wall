@@ -5930,6 +5930,9 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="GND30" library="supply1" deviceset="GND" device=""/>
 <part name="P+29" library="supply1" deviceset="VCC" device=""/>
 <part name="R5" library="resistor" deviceset="R-EU_" device="R0805" value="6.2k"/>
+<part name="T3" library="transistor" deviceset="*-NPN-" device="SOT23-EBC" value="BC547"/>
+<part name="R7" library="resistor" deviceset="R-EU_" device="R0805" value="7.5k"/>
+<part name="GND31" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6106,6 +6109,12 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <instance part="GND30" gate="1" x="17.78" y="55.88"/>
 <instance part="P+29" gate="VCC" x="33.02" y="91.44"/>
 <instance part="R5" gate="G$1" x="25.4" y="78.74" rot="R90"/>
+<instance part="T3" gate="G$1" x="25.4" y="22.86" smashed="yes" rot="MR0">
+<attribute name="NAME" x="20.32" y="22.86" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="20.32" y="20.32" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="R7" gate="G$1" x="35.56" y="22.86"/>
+<instance part="GND31" gate="1" x="22.86" y="12.7"/>
 </instances>
 <busses>
 <bus name="OUT0..23">
@@ -6321,6 +6330,11 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <pinref part="R6" gate="G$1" pin="1"/>
 <pinref part="GND30" gate="1" pin="GND"/>
 <wire x1="17.78" y1="58.42" x2="17.78" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="T3" gate="G$1" pin="E"/>
+<pinref part="GND31" gate="1" pin="GND"/>
+<wire x1="22.86" y1="17.78" x2="22.86" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -7133,6 +7147,30 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <pinref part="T2" gate="G$1" pin="B"/>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="22.86" y1="83.82" x2="25.4" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$36" class="0">
+<segment>
+<pinref part="R7" gate="G$1" pin="1"/>
+<pinref part="T3" gate="G$1" pin="B"/>
+<wire x1="30.48" y1="22.86" x2="27.94" y2="22.86" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$37" class="0">
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="40.64" y1="22.86" x2="45.72" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="22.86" x2="45.72" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="10"/>
+<wire x1="45.72" y1="50.8" x2="68.58" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="POWER_ON" class="0">
+<segment>
+<pinref part="T3" gate="G$1" pin="C"/>
+<wire x1="22.86" y1="27.94" x2="22.86" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="30.48" x2="-7.62" y2="30.48" width="0.1524" layer="91"/>
+<label x="-5.08" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
