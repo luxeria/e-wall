@@ -25,7 +25,8 @@ Standbyspannung des Netzteils versorgt um die Leistungsaufnahme im Standby zu
 minimieren. Die Versorgung erfolgt dabei über den USB Anschluss des 
 Launchpads. Die stabilisierte Betriebsspannung für den Mikrocontroller erzeugt 
 der im Launchpad integrierte Spannungsregler. Bei Bedarf wird das Netzteil vom 
-Controller gestartet. 
+Controller gestartet. Dazu wird die Leitung PON mit einer Open Collector Stufe 
+gegen GND gezogen. 
 
 \subsection{Mikrocontroller}
 Als Mikrocontroller kommt ein Controller vom Typ MSP430G2553 zum Einsatz. 
