@@ -16,3 +16,10 @@
 
 \section{Firmware}
 
+\subsection{Konzept}
+Der Ultraschallsensor wird in regelmässigen Abständen ausgelesen. Die 
+Zeitmessung erfolgt dabei durch einen Timer. Anschliessend werden die 
+Ausgänge entsprechend der gemessenen Distanz gesetzt. Die Ansteuerung der 
+Schieberegister erfolgt dabei durch das SPI Modul. Nach der Übertragung 
+werden die Zustände aktiviert. Anschliessend folgt die nächste 
+Distanzmessung. 
