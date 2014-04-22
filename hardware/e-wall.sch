@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
@@ -5912,29 +5912,33 @@ ULN and UDN Series&lt;p&gt;
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" deviceset="+12V" device=""/>
-<part name="R1" library="resistor" deviceset="R-EU_" device="R0805" value="20k"/>
-<part name="R2" library="resistor" deviceset="R-EU_" device="R0805" value="30k"/>
-<part name="R3" library="resistor" deviceset="R-EU_" device="R0805" value="110k"/>
-<part name="R4" library="resistor" deviceset="R-EU_" device="R0805" value="NB"/>
-<part name="T1" library="transistor" deviceset="*-NPN-" device="SOT23-EBC" value="BC547"/>
+<part name="R1" library="resistor" deviceset="R-EU_" device="0309/10" value="20k"/>
+<part name="R2" library="resistor" deviceset="R-EU_" device="0309/10" value="30k"/>
+<part name="R3" library="resistor" deviceset="R-EU_" device="0309/10" value="110k"/>
+<part name="R4" library="resistor" deviceset="R-EU_" device="0309/10" value="NB"/>
+<part name="T1" library="transistor" deviceset="*-NPN-" device="TO92-EBC" value="BC547"/>
 <part name="GND28" library="supply1" deviceset="GND" device=""/>
 <part name="GND29" library="supply1" deviceset="GND" device=""/>
 <part name="P+28" library="supply1" deviceset="VCC" device=""/>
-<part name="T2" library="transistor" deviceset="*-PNP-" device="SOT23-EBC" value="BC557"/>
-<part name="R6" library="resistor" deviceset="R-EU_" device="R0805" value="4.7k"/>
+<part name="T2" library="transistor" deviceset="*-PNP-" device="TO92-BEC" value="BC557"/>
+<part name="R6" library="resistor" deviceset="R-EU_" device="0309/10" value="4.7k"/>
 <part name="GND30" library="supply1" deviceset="GND" device=""/>
 <part name="P+29" library="supply1" deviceset="VCC" device=""/>
-<part name="R5" library="resistor" deviceset="R-EU_" device="R0805" value="6.2k"/>
-<part name="T3" library="transistor" deviceset="*-NPN-" device="SOT23-EBC" value="BC547"/>
-<part name="R7" library="resistor" deviceset="R-EU_" device="R0805" value="7.5k"/>
+<part name="R5" library="resistor" deviceset="R-EU_" device="0309/10" value="6.2k"/>
+<part name="T3" library="transistor" deviceset="*-NPN-" device="TO92-EBC" value="BC547"/>
+<part name="R7" library="resistor" deviceset="R-EU_" device="0309/10" value="7.5k"/>
 <part name="GND31" library="supply1" deviceset="GND" device=""/>
 <part name="SV1" library="con-lsta" deviceset="FE08-2" device=""/>
 <part name="SV2" library="con-lsta" deviceset="FE08-2" device=""/>
 <part name="SV3" library="con-lsta" deviceset="FE08-2" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="IC4" library="uln-udn" deviceset="ULN2803A" device=""/>
-<part name="IC5" library="uln-udn" deviceset="ULN2803A" device=""/>
-<part name="IC6" library="uln-udn" deviceset="ULN2803A" device=""/>
+<part name="IC4" library="uln-udn" deviceset="ULN2803A" device="" value="ULN2803"/>
+<part name="IC5" library="uln-udn" deviceset="ULN2803A" device="" value="ULN2803"/>
+<part name="IC6" library="uln-udn" deviceset="ULN2803A" device="" value="ULN2803"/>
+<part name="GND6" library="supply1" deviceset="GND" device=""/>
+<part name="GND7" library="supply1" deviceset="GND" device=""/>
+<part name="P+4" library="supply1" deviceset="VCC" device=""/>
+<part name="P+5" library="supply1" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6007,6 +6011,10 @@ ULN and UDN Series&lt;p&gt;
 <instance part="IC4" gate="G$1" x="185.42" y="106.68" rot="MR180"/>
 <instance part="IC5" gate="G$1" x="185.42" y="66.04" rot="MR180"/>
 <instance part="IC6" gate="G$1" x="185.42" y="27.94" rot="MR180"/>
+<instance part="GND6" gate="1" x="96.52" y="35.56"/>
+<instance part="GND7" gate="1" x="96.52" y="68.58"/>
+<instance part="P+4" gate="VCC" x="66.04" y="78.74"/>
+<instance part="P+5" gate="VCC" x="99.06" y="50.8"/>
 </instances>
 <busses>
 </busses>
@@ -6097,6 +6105,22 @@ ULN and UDN Series&lt;p&gt;
 <pinref part="IC4" gate="G$1" pin="GND"/>
 <wire x1="170.18" y1="116.84" x2="172.72" y2="116.84" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="20"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="88.9" y1="73.66" x2="96.52" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="73.66" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="23"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="88.9" y1="45.72" x2="96.52" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="45.72" x2="96.52" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="22"/>
+<wire x1="96.52" y1="43.18" x2="96.52" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="43.18" x2="96.52" y2="43.18" width="0.1524" layer="91"/>
+<junction x="96.52" y="43.18"/>
+</segment>
 </net>
 <net name="CLK" class="0">
 <segment>
@@ -6173,6 +6197,18 @@ ULN and UDN Series&lt;p&gt;
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="P+29" gate="VCC" pin="VCC"/>
 <wire x1="33.02" y1="88.9" x2="33.02" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+4" gate="VCC" pin="VCC"/>
+<wire x1="66.04" y1="76.2" x2="66.04" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="1"/>
+<wire x1="66.04" y1="73.66" x2="68.58" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="21"/>
+<pinref part="P+5" gate="VCC" pin="VCC"/>
+<wire x1="88.9" y1="40.64" x2="99.06" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="40.64" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="OUT0" class="0">
