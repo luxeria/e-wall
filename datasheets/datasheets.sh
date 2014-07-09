@@ -19,3 +19,7 @@ wget -nc -O ULN2803A.pdf http://www.st.com/web/en/resource/technical/document/da
 wget -nc http://www.nxp.com/documents/data_sheet/BC847_BC547_SER.pdf
 wget -nc http://www.nxp.com/documents/data_sheet/BC556_557.pdf
 
+# Ultrasonic sensor
+wget -nc http://www.mikrocontroller.net/attachment/218122/HC-SR04_ultraschallmodul_beschreibung_3.pdf
+wget -nc http://cdn2.boxtec.ch/pub/iteadstudio/HC-SR04.pdf
+wget -nc http://www.micropik.com/PDF/HCSR04.pdf
