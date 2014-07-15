@@ -2440,7 +2440,7 @@ design rules under a new name.</description>
 <wire x1="4.064" y1="47.244" x2="2.54" y2="45.72" width="0.8128" layer="1"/>
 <wire x1="2.71" y1="44.45" x2="2.54" y2="44.45" width="0.8128" layer="16"/>
 </signal>
-<signal name="N$28">
+<signal name="SOMI_UC">
 <contactref element="R9" pad="2"/>
 <contactref element="R8" pad="1"/>
 <contactref element="U$1" pad="14"/>
@@ -2646,56 +2646,6 @@ design rules under a new name.</description>
 <wire x1="45.72" y1="28.09" x2="45.89" y2="28.26" width="0.8128" layer="16"/>
 </signal>
 </signals>
-<errors>
-<approved hash="5,16,51da03363f523c47"/>
-<approved hash="5,16,3aa1dcd6b18b0605"/>
-<approved hash="5,16,606604763bca0e23"/>
-<approved hash="5,16,5173de76b3cf6d33"/>
-<approved hash="5,16,6805dcceb1535461"/>
-<approved hash="5,16,789405b639ca1511"/>
-<approved hash="5,16,0b300476385266ed"/>
-<approved hash="5,16,239fdd3eb08f1fd7"/>
-<approved hash="19,16,e4b092f9e4414d75"/>
-<approved hash="19,16,c30eb54be2d554d7"/>
-<approved hash="19,16,caba8308e6efa0ec"/>
-<approved hash="19,16,b01cc6d5e4c91c51"/>
-<approved hash="19,16,8186cffcdcdfeb50"/>
-<approved hash="19,16,8eeaffa7e6a52743"/>
-<approved hash="19,16,9b2cd932e343f236"/>
-<approved hash="19,16,a4d0eb4ee55bcdc2"/>
-<approved hash="5,16,6ab7754286e85a6e"/>
-<approved hash="19,16,10fbfae89e6e6596"/>
-<approved hash="5,16,ae6db19266c4ba48"/>
-<approved hash="19,16,ce7d35fcaaa8a10e"/>
-<approved hash="5,16,24883b42a2e87e51"/>
-<approved hash="19,16,2add04ced06e81af"/>
-<approved hash="5,16,78456791dac70660"/>
-<approved hash="19,16,d853dfd410ab4921"/>
-<approved hash="5,16,f661e942bee862b8"/>
-<approved hash="19,16,843216247a6f1d45"/>
-<approved hash="5,16,0abe15935ec5829b"/>
-<approved hash="19,16,a2a8a928c6a969da"/>
-<approved hash="5,16,c07adf4282e85ea3"/>
-<approved hash="19,16,5e2d403aec6e915f"/>
-<approved hash="5,16,d497cb951ac3c6b2"/>
-<approved hash="19,16,bc8fb30e3ca741fc"/>
-<approved hash="19,16,c1c59ed69a4ae16d"/>
-<approved hash="19,16,a7dc1cf88429a343"/>
-<approved hash="19,16,86023bca84d9ba65"/>
-<approved hash="19,16,f5f8489482a1f2af"/>
-<approved hash="19,16,cd2e71e686e1c9b1"/>
-<approved hash="19,16,e137bbc0a7aec79f"/>
-<approved hash="19,16,aa6bf7349dfe8c23"/>
-<approved hash="19,16,f9b1ad729a52dec9"/>
-<approved hash="5,16,617f1b3d508f1b34"/>
-<approved hash="5,16,cdd346763c51860d"/>
-<approved hash="5,16,1393187553cf69d0"/>
-<approved hash="5,16,be7747b63dc9f5f1"/>
-<approved hash="5,16,973941363b51dca7"/>
-<approved hash="5,16,2ae51acd51535082"/>
-<approved hash="5,16,78411ad5518b02e6"/>
-<approved hash="5,16,a68546763fc9eec3"/>
-</errors>
 </board>
 </drawing>
 </eagle>

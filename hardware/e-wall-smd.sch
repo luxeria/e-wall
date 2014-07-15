@@ -6564,6 +6564,7 @@ General-purpose diode for high-speed switching</description>
 <wire x1="109.22" y1="5.08" x2="109.22" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="104.14" y1="35.56" x2="109.22" y2="35.56" width="0.1524" layer="91"/>
+<label x="109.22" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -7182,7 +7183,7 @@ General-purpose diode for high-speed switching</description>
 <pinref part="P+18" gate="1" pin="+12V"/>
 </segment>
 </net>
-<net name="N$28" class="0">
+<net name="SOMI_UC" class="0">
 <segment>
 <wire x1="101.6" y1="58.42" x2="88.9" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="1"/>
