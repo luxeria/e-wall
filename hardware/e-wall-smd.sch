@@ -5016,14 +5016,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U$2" library="ultrasonic" deviceset="HC-SR04" device="" value="HC-SR04"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="U$1" library="msp430launchpad" deviceset="MSP430LAUNCHPAD_BASIC" device="" value="MSP430G2 Launchpad"/>
-<part name="Q1" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q2" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q3" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q4" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q5" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q6" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q7" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q8" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
+<part name="Q1" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q2" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q3" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q4" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q5" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q6" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q7" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q8" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
@@ -5032,14 +5032,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
-<part name="Q9" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q10" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q11" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q12" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q13" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q14" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q15" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q16" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
+<part name="Q9" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q10" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q11" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q12" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q13" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q14" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q15" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q16" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
@@ -5048,14 +5048,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
-<part name="Q17" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q18" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q19" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q20" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q21" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q22" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q23" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q24" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
+<part name="Q17" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q18" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q19" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q20" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q21" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q22" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q23" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q24" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="GND23" library="supply1" deviceset="GND" device=""/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
 <part name="GND25" library="supply1" deviceset="GND" device=""/>
@@ -5090,10 +5090,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="P+18" library="supply1" deviceset="+12V" device=""/>
 <part name="IC4" library="74xx-eu" deviceset="74*595" device="D" technology="HCT" value="74HCT595D"/>
 <part name="GND35" library="supply1" deviceset="GND" device=""/>
-<part name="Q25" library="transistor-power" deviceset="IRF8313P" device=""/>
-<part name="Q26" library="transistor-power" deviceset="IRF8313P" device=""/>
-<part name="Q27" library="transistor-power" deviceset="IRF8313P" device=""/>
-<part name="Q28" library="transistor-power" deviceset="IRF8313P" device=""/>
+<part name="Q25" library="transistor-power" deviceset="IRF8313P" device="" value="SI4214DDY"/>
+<part name="Q26" library="transistor-power" deviceset="IRF8313P" device="" value="SI4214DDY"/>
+<part name="Q27" library="transistor-power" deviceset="IRF8313P" device="" value="SI4214DDY"/>
+<part name="Q28" library="transistor-power" deviceset="IRF8313P" device="" value="SI4214DDY"/>
 <part name="GND36" library="supply1" deviceset="GND" device=""/>
 <part name="GND37" library="supply1" deviceset="GND" device=""/>
 <part name="GND38" library="supply1" deviceset="GND" device=""/>
@@ -5126,9 +5126,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="P+26" library="supply1" deviceset="+5V" device=""/>
 <part name="P+27" library="supply1" deviceset="+12V" device=""/>
 <part name="GND48" library="supply1" deviceset="GND" device=""/>
-<part name="Q29" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q30" library="transistor-small-signal" deviceset="BSS123" device="" value="2N7002P"/>
-<part name="Q31" library="transistor-small-signal" deviceset="BSS84" device=""/>
+<part name="Q29" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q30" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
+<part name="Q31" library="transistor-small-signal" deviceset="BSS84" device="" value="SI2347DS"/>
 <part name="GND49" library="supply1" deviceset="GND" device=""/>
 <part name="GND50" library="supply1" deviceset="GND" device=""/>
 </parts>

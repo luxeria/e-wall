@@ -19,6 +19,12 @@ wget -nc -O ULN2803A.pdf http://www.st.com/web/en/resource/technical/document/da
 wget -nc http://www.nxp.com/documents/data_sheet/BC847_BC547_SER.pdf
 wget -nc http://www.nxp.com/documents/data_sheet/BC556_557.pdf
 wget -nc http://www.nxp.com/documents/data_sheet/2N7002P.pdf
+wget -nc http://www.mouser.com/ds/2/302/BSS84-351729.pdf
+wget -nc http://www.vishay.com/docs/68645/si2302cd.pdf
+wget -nc http://www.mouser.com/ds/2/427/si2347ds-279626.pdf
+wget -nc http://www.mouser.com/ds/2/427/si4214dy-260403.pdf
+wget -nc http://www.mouser.com/ds/2/427/si4214ddy-244436.pdf
+wget -nc http://www.mouser.com/ds/2/115/DMN6040SSD-218890.pdf
 
 # Ultrasonic sensor
 wget -nc http://www.mikrocontroller.net/attachment/218122/HC-SR04_ultraschallmodul_beschreibung_3.pdf
