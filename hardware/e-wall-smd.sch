@@ -7227,8 +7227,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </variantdefs>
 <classes>
 <class number="0" name="default" width="0.4064" drill="0">
+<clearance class="0" value="0.15"/>
 </class>
 <class number="1" name="Power" width="0.8128" drill="0">
+<clearance class="0" value="0.15"/>
+<clearance class="1" value="0.15"/>
 </class>
 </classes>
 <parts>
