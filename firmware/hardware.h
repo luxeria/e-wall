@@ -5,7 +5,7 @@
  * @file
  *
  * Hardware description for the ti launchpad
- * 
+ * Header file for hardware.c
  *
  * @author      Daniel Winz <daniel.winz@stud.hslu.ch>
  */
