@@ -5,7 +5,7 @@
  */
 
 #include <msp430.h>
-#include <io.h>
+//#include <io.h>
 //~ #include <signal.h>
 //~ #include <mspgcc/util.h>                // delay()
 //~ #include <mspgcc/eventhandler.h>
@@ -32,6 +32,5 @@ int main(void) {
     hardware_lowlevel_init();
     while(1) {
         hello_world();
-        temp++;
     }
 }
