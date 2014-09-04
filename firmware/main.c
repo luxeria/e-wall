@@ -5,11 +5,7 @@
  */
 
 #include <msp430.h>
-//#include <io.h>
-//~ #include <signal.h>
-//~ #include <mspgcc/util.h>                // delay()
-//~ #include <mspgcc/eventhandler.h>
-#include <stdbool.h>
+#include <stdint.h>
 #include "hardware.h"
 
 /**

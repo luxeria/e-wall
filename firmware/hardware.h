@@ -10,10 +10,8 @@
  * @author      Daniel Winz <daniel.winz@stud.hslu.ch>
  */
 
-//~ #include <io.h>
-//~ #include <signal.h>
-//~ #include <msp430g2553.h>
 #include <msp430.h>
+#include <stdint.h>
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -7,6 +7,7 @@
  */
 
 #include <msp430.h>
+#include <stdint.h>
 #include "spi.h"
 
 /**
@@ -24,7 +25,7 @@ void spi_init(void)
  * @param data
  * @return void
  */
-void spi_write_byte(unsigned char data)
+void spi_write_byte(uint8_t data)
 {
 
 }
@@ -34,7 +35,7 @@ void spi_write_byte(unsigned char data)
  * @param data
  * @return void
  */
-void spi_write_int(unsigned int data)
+void spi_write_int(uint16_t data)
 {
 
 }
@@ -44,7 +45,7 @@ void spi_write_int(unsigned int data)
  * @param pointer to data
  * @return void
  */
-void spi_write_bytestream(unsigned char* dataptr)
+void spi_write_bytestream(uint8_t* dataptr)
 {
 
 }
@@ -64,7 +65,7 @@ void spi_write_led(led_t data)
  * @param void
  * @return data
  */
-unsigned char spi_read_byte(void)
+uint8_t spi_read_byte(void)
 {
     return(0);
 }
@@ -74,7 +75,7 @@ unsigned char spi_read_byte(void)
  * @param void
  * @return data
  */
-unsigned int spi_read_int(void)
+uint16_t spi_read_int(void)
 {
     return(0);
 }
@@ -84,7 +85,7 @@ unsigned int spi_read_int(void)
  * @param pointer to data
  * return void
  */
-void spi_read_bytestream(unsigned char* dataptr)
+void spi_read_bytestream(uint8_t* dataptr)
 {
 
 }

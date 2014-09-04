@@ -8,10 +8,8 @@
  * @author      Daniel Winz <daniel.winz@stud.hslu.ch>
  */
 
-//~ #include <mspgcc/util.h>                // delay()
-//~ #include <mspgcc/fll.h>
-//~ #include <msp430g2553.h>
 #include <msp430.h>
+#include <stdint.h>
 #include "hardware.h"
 
 

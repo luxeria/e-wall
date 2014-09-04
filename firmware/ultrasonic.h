@@ -9,11 +9,13 @@
 #ifndef ULTRASONIC_H
 #define ULTRASONIC_H
 
+#include <stdint.h>
+
 typedef struct distance_
 {
-    unsigned int value;
-    unsigned char lock : 1;
-    unsigned char new  : 1;
+    uint16_t value;
+    uint8_t lock : 1;
+    uint8_t new  : 1;
 } distance_t;
 
 /**
@@ -28,6 +30,6 @@ void init_us(void);
  * @param void
  * @return distance
  */
-unsigned int get_dist(void);
+uint16_t get_dist(void);
 
 #endif //ULTRASONIC_H
