@@ -1,7 +1,7 @@
 # makfile configuration
 
 NAME            = e-wall
-CSOURCES        = main.c hardware.c
+CSOURCES        = main.c hardware.c ultrasonic.c spi.c
 #~ ASOURCES        = 
 CPU             = msp430g2553
 PLATFORM        = launchpad_g2553
