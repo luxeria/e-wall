@@ -20,10 +20,10 @@ typedef struct distance_
 
 typedef enum us_state_
 {
-    US_IDLE,
-    US_TRIG_SENT,
-    US_WAIT,
-    US_RESPONSE
+    US_IDLE,        // Ready for next measurement cycle
+    US_TRIG_SENT,   // Trigger started
+    US_WAIT,        // Trigger done, waiting for response
+    US_RESPONSE     // Response received, waiting until module is ready for next measurement cycle
 } us_state_t;
 
 /**
