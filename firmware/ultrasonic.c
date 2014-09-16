@@ -11,6 +11,7 @@
 #include "ultrasonic.h"
 
 distance_t curr_dist;
+uint8_t us_state = US_IDLE;
 
 /**
  * Initialize Ultrasonic measurement
@@ -56,6 +57,46 @@ void set_dist(uint16_t value)
     {
         curr_dist.value = value;
         curr_dist.new   = 1;
+    }
+}
+
+/*interrupt(TIMER1_A0_VECTOR)*/ void timer1_a0_isr(void) // Compare interrupt
+{
+    switch(us_state)
+    {
+    case US_IDLE:       // Ready for next measurement cycle 
+        us_state = US_TRIG_SENT;
+        break;
+    case US_TRIG_SENT:  // Trigger started
+        us_state = US_WAIT;
+        break;
+    case US_WAIT:       // Trigger done, waiting for response
+        break;          // Not intended to be handled here -> ignored
+    case US_RESPONSE:   // Response received, waiting until module is ready for next measurement
+        break;          // Not intended to be handled here -> ignored
+    default:            // No valid state
+        us_state = US_IDLE;
+        break;
+    }
+}
+
+/*interrupt(TIMER1_A1_VECTOR)*/ void timer1_a1_isr(void) // Capture interupt
+{
+    switch(us_state)
+    {
+    case US_IDLE:       // Ready for next measurement cycle 
+        break;          // Not intended to be handled here -> ignored
+    case US_TRIG_SENT:  // Trigger started
+        break;          // Not intended to be handled here -> ignored
+    case US_WAIT:       // Trigger done, waiting for response
+        us_state = US_RESPONSE;
+        break;
+    case US_RESPONSE:   // Response received, waiting until module is ready for next measurement
+        us_state = US_IDLE;
+        break;
+    default:            // No valid state
+        us_state = US_IDLE;
+        break;
     }
 }
 

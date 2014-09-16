@@ -18,6 +18,14 @@ typedef struct distance_
     uint8_t new  : 1;
 } distance_t;
 
+typedef enum us_state_
+{
+    US_IDLE,
+    US_TRIG_SENT,
+    US_WAIT,
+    US_RESPONSE
+} us_state_t;
+
 /**
  * Initialize Ultrasonic measurement
  * @param void

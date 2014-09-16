@@ -22,7 +22,7 @@ void spi_init(void)
 
 /**
  * Write byte to SPI slave
- * @param data
+ * @param data data to be sent
  * @return void
  */
 void spi_write_byte(uint8_t data)
@@ -32,7 +32,7 @@ void spi_write_byte(uint8_t data)
 
 /**
  * Write two bytes to SPI Slave
- * @param data
+ * @param data data to be sent
  * @return void
  */
 void spi_write_int(uint16_t data)
@@ -42,7 +42,7 @@ void spi_write_int(uint16_t data)
 
 /**
  * Write bytestream to SPI slave
- * @param pointer to data
+ * @param dataptr pointer to data
  * @return void
  */
 void spi_write_bytestream(uint8_t* dataptr)
@@ -52,7 +52,7 @@ void spi_write_bytestream(uint8_t* dataptr)
 
 /**
  * Write led data to SPI slave
- * @param led data
+ * @param data led data to be sent
  * @return void
  */
 void spi_write_led(led_t data)
@@ -82,10 +82,11 @@ uint16_t spi_read_int(void)
 
 /**
  * Read bytestream from SPI slave
- * @param pointer to data
+ * @param dataptr pointer to data
+ * @param cnt number of bytes to send
  * return void
  */
-void spi_read_bytestream(uint8_t* dataptr)
+void spi_read_bytestream(uint8_t* dataptr, uint8_t cnt)
 {
 
 }
