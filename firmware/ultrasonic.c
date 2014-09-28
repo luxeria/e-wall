@@ -8,6 +8,7 @@
 
 #include <msp430.h>
 #include <stdint.h>
+#include <signal.h>
 #include "ultrasonic.h"
 
 distance_t curr_dist;
@@ -60,7 +61,7 @@ void set_dist(uint16_t value)
     }
 }
 
-/*interrupt(TIMER1_A0_VECTOR)*/ void timer1_a0_isr(void) // Compare interrupt
+interrupt(TIMER1_A0_VECTOR) timer1_a0_isr(void) // Compare interrupt
 {
     switch(us_state)
     {
@@ -80,8 +81,9 @@ void set_dist(uint16_t value)
     }
 }
 
-/*interrupt(TIMER1_A1_VECTOR)*/ void timer1_a1_isr(void) // Capture interupt
+interrupt(TIMER1_A1_VECTOR) timer1_a1_isr(void) // Capture interupt
 {
+    static uint16_t temp_dist = 0;
     switch(us_state)
     {
     case US_IDLE:       // Ready for next measurement cycle 
@@ -90,9 +92,20 @@ void set_dist(uint16_t value)
         break;          // Not intended to be handled here -> ignored
     case US_WAIT:       // Trigger done, waiting for response
         us_state = US_RESPONSE;
+        temp_dist = TA1CCR1;    // save current time to temp_dist
+        TA1CCTL1 &= ~(CM0);     // capture on falling edge
+        TA1CCTL1 |= (CM1);
         break;
     case US_RESPONSE:   // Response received, waiting until module is ready for next measurement
         us_state = US_IDLE;
+        if(!curr_dist.lock)
+        {
+            curr_dist.value = TA1CCR1 - temp_dist;
+            curr_dist.new = 1;
+        }
+        TA1CCTL1 &= ~(CM1);     // capture on rising edge
+        TA1CCTL1 |= (CM0);
+
         break;
     default:            // No valid state
         us_state = US_IDLE;
