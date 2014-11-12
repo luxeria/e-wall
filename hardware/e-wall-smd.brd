@@ -43,7 +43,7 @@
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
@@ -3617,6 +3617,10 @@
 <rectangle x1="41.92905" y1="10.62355" x2="42.95775" y2="10.63625" layer="200"/>
 <rectangle x1="41.92905" y1="10.63625" x2="42.95775" y2="10.64895" layer="200"/>
 <text x="37.6174" y="0.4318" size="0.0254" layer="200" font="vector">/home/daniw/Downloads/oshw-logo-800-px.bmp</text>
+<text x="31.496" y="1.27" size="1.778" layer="200" font="vector">5V</text>
+<text x="34.036" y="8.128" size="1.778" layer="200" font="vector">EN</text>
+<text x="35.814" y="41.91" size="1.778" layer="200" font="vector">12V</text>
+<text x="7.366" y="45.72" size="1.778" layer="200" font="vector">GND</text>
 </plain>
 <libraries>
 <library name="74xx-eu">
