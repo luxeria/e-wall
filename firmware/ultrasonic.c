@@ -72,11 +72,11 @@ interrupt(TIMER1_A0_VECTOR) timer1_a0_isr(void) // Compare interrupt
         us_state = US_WAIT;
         break;
     case US_WAIT:       // Trigger done, waiting for response
-        break;          // Not intended to be handled here -> ignored
+        break;              // Not intended to be handled here -> ignored
     case US_RESPONSE:   // Response received, waiting until module is ready for next measurement
-        break;          // Not intended to be handled here -> ignored
+        break;              // Not intended to be handled here -> ignored
     default:            // No valid state
-        us_state = US_IDLE;
+        us_state = US_IDLE; // Reset state machine
         break;
     }
 }
@@ -87,28 +87,24 @@ interrupt(TIMER1_A1_VECTOR) timer1_a1_isr(void) // Capture interupt
     switch(us_state)
     {
     case US_IDLE:       // Ready for next measurement cycle 
-        break;          // Not intended to be handled here -> ignored
+        break;              // Not intended to be handled here -> ignored
     case US_TRIG_SENT:  // Trigger started
-        break;          // Not intended to be handled here -> ignored
+        break;              // Not intended to be handled here -> ignored
     case US_WAIT:       // Trigger done, waiting for response
         us_state = US_RESPONSE;
         temp_dist = TA1CCR1;    // save current time to temp_dist
-        TA1CCTL1 &= ~(CM0);     // capture on falling edge
+        TA1CCTL1 &= ~(CM0);     // setup capture on falling edge
         TA1CCTL1 |= (CM1);
         break;
     case US_RESPONSE:   // Response received, waiting until module is ready for next measurement
         us_state = US_IDLE;
-        if(!curr_dist.lock)
-        {
-            curr_dist.value = TA1CCR1 - temp_dist;
-            curr_dist.new = 1;
-        }
+        set_dist(TA1CCR1 - temp_dist);
         TA1CCTL1 &= ~(CM1);     // capture on rising edge
         TA1CCTL1 |= (CM0);
 
         break;
     default:            // No valid state
-        us_state = US_IDLE;
+        us_state = US_IDLE; // Reset state machine
         break;
     }
 }
