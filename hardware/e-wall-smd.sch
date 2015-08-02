@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -351,6 +351,12 @@ Based on the following sources:
 <packages>
 </packages>
 <symbols>
+<symbol name="AGND">
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.0922" y1="-0.508" x2="1.0922" y2="-0.508" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="AGND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
 <symbol name="GND">
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
@@ -378,6 +384,19 @@ Based on the following sources:
 </symbol>
 </symbols>
 <devicesets>
+<deviceset name="AGND" prefix="AGND">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="VR1" symbol="AGND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="GND" prefix="GND">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
@@ -7229,7 +7248,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <class number="0" name="default" width="0.4064" drill="0">
 <clearance class="0" value="0.15"/>
 </class>
-<class number="1" name="Power" width="0.8128" drill="0">
+<class number="1" name="Power" width="0.6096" drill="0">
 <clearance class="0" value="0.15"/>
 <clearance class="1" value="0.15"/>
 </class>
@@ -7238,30 +7257,20 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="IC1" library="74xx-eu" deviceset="74*595" device="D" technology="HCT" value="74HCT595D"/>
 <part name="IC2" library="74xx-eu" deviceset="74*595" device="D" technology="HCT" value="74HCT595D"/>
 <part name="IC3" library="74xx-eu" deviceset="74*595" device="D" technology="HCT" value="74HCT595D"/>
-<part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" deviceset="+12V" device=""/>
 <part name="R1" library="resistor" deviceset="R-EU_" device="R1206" value="20k"/>
 <part name="R2" library="resistor" deviceset="R-EU_" device="R1206" value="30k"/>
 <part name="R3" library="resistor" deviceset="R-EU_" device="R1206" value="100k"/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="R1206" value="100k"/>
-<part name="GND28" library="supply1" deviceset="GND" device=""/>
-<part name="GND29" library="supply1" deviceset="GND" device=""/>
 <part name="R6" library="resistor" deviceset="R-EU_" device="R1206" value="4.7k"/>
-<part name="GND30" library="supply1" deviceset="GND" device=""/>
 <part name="R7" library="resistor" deviceset="R-EU_" device="R1206" value="100k"/>
-<part name="GND31" library="supply1" deviceset="GND" device=""/>
 <part name="SV1" library="con-lsta" deviceset="FE08-2" device="" value="8x2"/>
 <part name="SV2" library="con-lsta" deviceset="FE08-2" device="" value="8x2"/>
 <part name="SV3" library="con-lsta" deviceset="FE08-2" device="" value="8x2"/>
-<part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="R8" library="resistor" deviceset="R-EU_" device="R1206" value="20k"/>
 <part name="R9" library="resistor" deviceset="R-EU_" device="R1206" value="30k"/>
-<part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="U$2" library="ultrasonic" deviceset="HC-SR04" device="" value="HC-SR04"/>
-<part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="U$1" library="msp430launchpad" deviceset="MSP430LAUNCHPAD_BASIC" device="" value="MSP430G2 Launchpad"/>
 <part name="Q1" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q2" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
@@ -7271,14 +7280,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="Q6" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q7" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q8" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
-<part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="GND12" library="supply1" deviceset="GND" device=""/>
-<part name="GND13" library="supply1" deviceset="GND" device=""/>
-<part name="GND14" library="supply1" deviceset="GND" device=""/>
+<part name="GND4" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND5" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND6" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND8" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND11" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND12" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND13" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND14" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
 <part name="Q9" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q10" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q11" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
@@ -7287,14 +7296,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="Q14" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q15" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q16" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
-<part name="GND15" library="supply1" deviceset="GND" device=""/>
-<part name="GND16" library="supply1" deviceset="GND" device=""/>
-<part name="GND17" library="supply1" deviceset="GND" device=""/>
-<part name="GND18" library="supply1" deviceset="GND" device=""/>
-<part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="GND20" library="supply1" deviceset="GND" device=""/>
-<part name="GND21" library="supply1" deviceset="GND" device=""/>
-<part name="GND22" library="supply1" deviceset="GND" device=""/>
+<part name="GND15" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND16" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND17" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND18" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND19" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND20" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND21" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND22" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
 <part name="Q17" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q18" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q19" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
@@ -7303,14 +7312,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="Q22" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q23" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q24" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
-<part name="GND23" library="supply1" deviceset="GND" device=""/>
-<part name="GND24" library="supply1" deviceset="GND" device=""/>
-<part name="GND25" library="supply1" deviceset="GND" device=""/>
-<part name="GND26" library="supply1" deviceset="GND" device=""/>
-<part name="GND27" library="supply1" deviceset="GND" device=""/>
-<part name="GND32" library="supply1" deviceset="GND" device=""/>
-<part name="GND33" library="supply1" deviceset="GND" device=""/>
-<part name="GND34" library="supply1" deviceset="GND" device=""/>
+<part name="GND23" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND24" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND25" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND26" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND27" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND32" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND33" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND34" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
 <part name="D1" library="diode" deviceset="BAS40-05" device=""/>
 <part name="P+5" library="supply1" deviceset="+12V" device=""/>
 <part name="D2" library="diode" deviceset="BAS40-05" device=""/>
@@ -7336,19 +7345,18 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="P+17" library="supply1" deviceset="+12V" device=""/>
 <part name="P+18" library="supply1" deviceset="+12V" device=""/>
 <part name="IC4" library="74xx-eu" deviceset="74*595" device="D" technology="HCT" value="74HCT595D"/>
-<part name="GND35" library="supply1" deviceset="GND" device=""/>
 <part name="Q25" library="transistor-power" deviceset="IRF8313P" device="" value="SI4214DDY"/>
 <part name="Q26" library="transistor-power" deviceset="IRF8313P" device="" value="SI4214DDY"/>
 <part name="Q27" library="transistor-power" deviceset="IRF8313P" device="" value="SI4214DDY"/>
 <part name="Q28" library="transistor-power" deviceset="IRF8313P" device="" value="SI4214DDY"/>
-<part name="GND36" library="supply1" deviceset="GND" device=""/>
-<part name="GND37" library="supply1" deviceset="GND" device=""/>
-<part name="GND38" library="supply1" deviceset="GND" device=""/>
-<part name="GND39" library="supply1" deviceset="GND" device=""/>
-<part name="GND40" library="supply1" deviceset="GND" device=""/>
-<part name="GND41" library="supply1" deviceset="GND" device=""/>
-<part name="GND42" library="supply1" deviceset="GND" device=""/>
-<part name="GND43" library="supply1" deviceset="GND" device=""/>
+<part name="GND36" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND37" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND38" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND39" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND40" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND41" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND42" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
+<part name="GND43" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
 <part name="SV4" library="con-lstb" deviceset="MA04-2" device="" value="4x2"/>
 <part name="SV5" library="con-lstb" deviceset="MA04-2" device="" value="4x2"/>
 <part name="P+20" library="supply1" deviceset="+5V" device=""/>
@@ -7359,10 +7367,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="P+19" library="supply1" deviceset="+5V" device=""/>
-<part name="GND44" library="supply1" deviceset="GND" device=""/>
-<part name="GND45" library="supply1" deviceset="GND" device=""/>
-<part name="GND46" library="supply1" deviceset="GND" device=""/>
-<part name="GND47" library="supply1" deviceset="GND" device=""/>
 <part name="P+23" library="supply1" deviceset="+5V" device=""/>
 <part name="P+24" library="supply1" deviceset="+5V" device=""/>
 <part name="P+25" library="supply1" deviceset="+5V" device=""/>
@@ -7372,20 +7376,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="TP4" library="testpad" deviceset="PTR1" device="PAD1-20"/>
 <part name="P+26" library="supply1" deviceset="+5V" device=""/>
 <part name="P+27" library="supply1" deviceset="+12V" device=""/>
-<part name="GND48" library="supply1" deviceset="GND" device=""/>
+<part name="GND48" library="supply1" deviceset="AGND" device="" value="PWR_GND"/>
 <part name="Q29" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q30" library="transistor-small-signal" deviceset="BSS123" device="" value="SI2302CDS"/>
 <part name="Q31" library="transistor-small-signal" deviceset="BSS84" device="" value="SI2347DS"/>
-<part name="GND49" library="supply1" deviceset="GND" device=""/>
-<part name="GND50" library="supply1" deviceset="GND" device=""/>
 <part name="C1" library="resistor" deviceset="C-EU" device="C1206" value="33n"/>
 <part name="C2" library="resistor" deviceset="C-EU" device="C1206" value="33n"/>
 <part name="C3" library="resistor" deviceset="C-EU" device="C1206" value="33n"/>
 <part name="C4" library="resistor" deviceset="C-EU" device="C1206" value="33n"/>
-<part name="GND51" library="supply1" deviceset="GND" device=""/>
-<part name="GND52" library="supply1" deviceset="GND" device=""/>
-<part name="GND53" library="supply1" deviceset="GND" device=""/>
-<part name="GND54" library="supply1" deviceset="GND" device=""/>
 <part name="P+28" library="supply1" deviceset="+5V" device=""/>
 <part name="P+29" library="supply1" deviceset="+5V" device=""/>
 <part name="P+30" library="supply1" deviceset="+5V" device=""/>
@@ -7398,6 +7396,29 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="P+33" library="supply1" deviceset="+12V" device=""/>
 <part name="P+34" library="supply1" deviceset="+12V" device=""/>
 <part name="P+35" library="supply1" deviceset="+12V" device=""/>
+<part name="GND55" library="supply1" deviceset="GND" device=""/>
+<part name="GND31" library="supply1" deviceset="GND" device=""/>
+<part name="GND1" library="supply1" deviceset="GND" device=""/>
+<part name="GND2" library="supply1" deviceset="GND" device=""/>
+<part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="GND9" library="supply1" deviceset="GND" device=""/>
+<part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="GND28" library="supply1" deviceset="GND" device=""/>
+<part name="GND29" library="supply1" deviceset="GND" device=""/>
+<part name="GND30" library="supply1" deviceset="GND" device=""/>
+<part name="GND35" library="supply1" deviceset="GND" device=""/>
+<part name="GND44" library="supply1" deviceset="GND" device=""/>
+<part name="GND45" library="supply1" deviceset="GND" device=""/>
+<part name="GND46" library="supply1" deviceset="GND" device=""/>
+<part name="GND47" library="supply1" deviceset="GND" device=""/>
+<part name="GND49" library="supply1" deviceset="GND" device=""/>
+<part name="GND50" library="supply1" deviceset="GND" device=""/>
+<part name="GND51" library="supply1" deviceset="GND" device=""/>
+<part name="GND52" library="supply1" deviceset="GND" device=""/>
+<part name="GND53" library="supply1" deviceset="GND" device=""/>
+<part name="GND54" library="supply1" deviceset="GND" device=""/>
+<part name="R5" library="resistor" deviceset="R-EU_" device="R1206" value="0"/>
+<part name="GND7" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7421,30 +7442,20 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="IC1" gate="A" x="137.16" y="142.24"/>
 <instance part="IC2" gate="A" x="137.16" y="101.6"/>
 <instance part="IC3" gate="A" x="137.16" y="63.5"/>
-<instance part="GND1" gate="1" x="121.92" y="124.46"/>
-<instance part="GND2" gate="1" x="121.92" y="83.82"/>
-<instance part="GND3" gate="1" x="121.92" y="45.72"/>
 <instance part="P+8" gate="1" x="421.64" y="152.4"/>
 <instance part="R1" gate="G$1" x="10.16" y="60.96" rot="R90"/>
 <instance part="R2" gate="G$1" x="10.16" y="45.72" rot="R90"/>
 <instance part="R3" gate="G$1" x="43.18" y="63.5" rot="R90"/>
 <instance part="R4" gate="G$1" x="33.02" y="88.9" rot="R90"/>
-<instance part="GND28" gate="1" x="33.02" y="55.88"/>
-<instance part="GND29" gate="1" x="10.16" y="35.56"/>
 <instance part="R6" gate="G$1" x="17.78" y="63.5" rot="R90"/>
-<instance part="GND30" gate="1" x="17.78" y="55.88"/>
 <instance part="R7" gate="G$1" x="33.02" y="15.24" rot="R90"/>
-<instance part="GND31" gate="1" x="22.86" y="7.62"/>
 <instance part="SV1" gate="G$1" x="408.94" y="134.62" rot="MR0"/>
 <instance part="SV2" gate="G$1" x="408.94" y="93.98" rot="MR0"/>
 <instance part="SV3" gate="G$1" x="408.94" y="55.88" rot="MR0"/>
-<instance part="GND7" gate="1" x="96.52" y="68.58"/>
 <instance part="P+4" gate="VCC" x="66.04" y="78.74"/>
 <instance part="R8" gate="G$1" x="104.14" y="30.48" rot="R90"/>
 <instance part="R9" gate="G$1" x="104.14" y="15.24" rot="R90"/>
-<instance part="GND9" gate="1" x="104.14" y="5.08"/>
 <instance part="U$2" gate="G$1" x="-15.24" y="66.04"/>
-<instance part="GND10" gate="1" x="-2.54" y="60.96"/>
 <instance part="U$1" gate="G$1" x="78.74" y="60.96"/>
 <instance part="Q1" gate="G$1" x="187.96" y="142.24"/>
 <instance part="Q2" gate="G$1" x="187.96" y="124.46"/>
@@ -7454,14 +7465,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="Q6" gate="G$1" x="187.96" y="53.34"/>
 <instance part="Q7" gate="G$1" x="187.96" y="35.56"/>
 <instance part="Q8" gate="G$1" x="187.96" y="17.78"/>
-<instance part="GND4" gate="1" x="187.96" y="45.72"/>
-<instance part="GND5" gate="1" x="187.96" y="27.94"/>
-<instance part="GND6" gate="1" x="187.96" y="10.16"/>
-<instance part="GND8" gate="1" x="187.96" y="63.5"/>
-<instance part="GND11" gate="1" x="187.96" y="81.28"/>
-<instance part="GND12" gate="1" x="187.96" y="99.06"/>
-<instance part="GND13" gate="1" x="187.96" y="116.84"/>
-<instance part="GND14" gate="1" x="187.96" y="134.62"/>
+<instance part="GND4" gate="VR1" x="187.96" y="45.72"/>
+<instance part="GND5" gate="VR1" x="187.96" y="27.94"/>
+<instance part="GND6" gate="VR1" x="187.96" y="10.16"/>
+<instance part="GND8" gate="VR1" x="187.96" y="63.5"/>
+<instance part="GND11" gate="VR1" x="187.96" y="81.28"/>
+<instance part="GND12" gate="VR1" x="187.96" y="99.06"/>
+<instance part="GND13" gate="VR1" x="187.96" y="116.84"/>
+<instance part="GND14" gate="VR1" x="187.96" y="134.62"/>
 <instance part="Q9" gate="G$1" x="238.76" y="142.24"/>
 <instance part="Q10" gate="G$1" x="238.76" y="124.46"/>
 <instance part="Q11" gate="G$1" x="238.76" y="106.68"/>
@@ -7470,14 +7481,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="Q14" gate="G$1" x="238.76" y="53.34"/>
 <instance part="Q15" gate="G$1" x="238.76" y="35.56"/>
 <instance part="Q16" gate="G$1" x="238.76" y="17.78"/>
-<instance part="GND15" gate="1" x="238.76" y="45.72"/>
-<instance part="GND16" gate="1" x="238.76" y="27.94"/>
-<instance part="GND17" gate="1" x="238.76" y="10.16"/>
-<instance part="GND18" gate="1" x="238.76" y="63.5"/>
-<instance part="GND19" gate="1" x="238.76" y="81.28"/>
-<instance part="GND20" gate="1" x="238.76" y="99.06"/>
-<instance part="GND21" gate="1" x="238.76" y="116.84"/>
-<instance part="GND22" gate="1" x="238.76" y="134.62"/>
+<instance part="GND15" gate="VR1" x="238.76" y="45.72"/>
+<instance part="GND16" gate="VR1" x="238.76" y="27.94"/>
+<instance part="GND17" gate="VR1" x="238.76" y="10.16"/>
+<instance part="GND18" gate="VR1" x="238.76" y="63.5"/>
+<instance part="GND19" gate="VR1" x="238.76" y="81.28"/>
+<instance part="GND20" gate="VR1" x="238.76" y="99.06"/>
+<instance part="GND21" gate="VR1" x="238.76" y="116.84"/>
+<instance part="GND22" gate="VR1" x="238.76" y="134.62"/>
 <instance part="Q17" gate="G$1" x="289.56" y="142.24"/>
 <instance part="Q18" gate="G$1" x="289.56" y="124.46"/>
 <instance part="Q19" gate="G$1" x="289.56" y="106.68"/>
@@ -7486,14 +7497,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="Q22" gate="G$1" x="289.56" y="53.34"/>
 <instance part="Q23" gate="G$1" x="289.56" y="35.56"/>
 <instance part="Q24" gate="G$1" x="289.56" y="17.78"/>
-<instance part="GND23" gate="1" x="289.56" y="45.72"/>
-<instance part="GND24" gate="1" x="289.56" y="27.94"/>
-<instance part="GND25" gate="1" x="289.56" y="10.16"/>
-<instance part="GND26" gate="1" x="289.56" y="63.5"/>
-<instance part="GND27" gate="1" x="289.56" y="81.28"/>
-<instance part="GND32" gate="1" x="289.56" y="99.06"/>
-<instance part="GND33" gate="1" x="289.56" y="116.84"/>
-<instance part="GND34" gate="1" x="289.56" y="134.62"/>
+<instance part="GND23" gate="VR1" x="289.56" y="45.72"/>
+<instance part="GND24" gate="VR1" x="289.56" y="27.94"/>
+<instance part="GND25" gate="VR1" x="289.56" y="10.16"/>
+<instance part="GND26" gate="VR1" x="289.56" y="63.5"/>
+<instance part="GND27" gate="VR1" x="289.56" y="81.28"/>
+<instance part="GND32" gate="VR1" x="289.56" y="99.06"/>
+<instance part="GND33" gate="VR1" x="289.56" y="116.84"/>
+<instance part="GND34" gate="VR1" x="289.56" y="134.62"/>
 <instance part="D1" gate="G$1" x="208.28" y="139.7" rot="MR90"/>
 <instance part="P+5" gate="1" x="210.82" y="142.24"/>
 <instance part="D2" gate="G$1" x="208.28" y="104.14" rot="MR90"/>
@@ -7519,7 +7530,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="P+17" gate="1" x="312.42" y="35.56"/>
 <instance part="P+18" gate="1" x="312.42" y="71.12"/>
 <instance part="IC4" gate="A" x="137.16" y="25.4"/>
-<instance part="GND35" gate="1" x="121.92" y="7.62"/>
 <instance part="Q25" gate="A" x="337.82" y="124.46"/>
 <instance part="Q25" gate="B" x="337.82" y="142.24"/>
 <instance part="Q26" gate="A" x="337.82" y="88.9"/>
@@ -7528,14 +7538,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="Q27" gate="B" x="337.82" y="71.12"/>
 <instance part="Q28" gate="A" x="337.82" y="17.78"/>
 <instance part="Q28" gate="B" x="337.82" y="35.56"/>
-<instance part="GND36" gate="1" x="340.36" y="27.94"/>
-<instance part="GND37" gate="1" x="340.36" y="10.16"/>
-<instance part="GND38" gate="1" x="340.36" y="63.5"/>
-<instance part="GND39" gate="1" x="340.36" y="45.72"/>
-<instance part="GND40" gate="1" x="340.36" y="99.06"/>
-<instance part="GND41" gate="1" x="340.36" y="81.28"/>
-<instance part="GND42" gate="1" x="340.36" y="134.62"/>
-<instance part="GND43" gate="1" x="340.36" y="116.84"/>
+<instance part="GND36" gate="VR1" x="340.36" y="27.94"/>
+<instance part="GND37" gate="VR1" x="340.36" y="10.16"/>
+<instance part="GND38" gate="VR1" x="340.36" y="63.5"/>
+<instance part="GND39" gate="VR1" x="340.36" y="45.72"/>
+<instance part="GND40" gate="VR1" x="340.36" y="99.06"/>
+<instance part="GND41" gate="VR1" x="340.36" y="81.28"/>
+<instance part="GND42" gate="VR1" x="340.36" y="134.62"/>
+<instance part="GND43" gate="VR1" x="340.36" y="116.84"/>
 <instance part="SV4" gate="G$1" x="408.94" y="33.02"/>
 <instance part="SV5" gate="G$1" x="408.94" y="12.7"/>
 <instance part="P+20" gate="1" x="73.66" y="129.54"/>
@@ -7550,10 +7560,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="IC2" gate="P" x="81.28" y="119.38"/>
 <instance part="IC3" gate="P" x="88.9" y="119.38"/>
 <instance part="IC4" gate="P" x="96.52" y="119.38"/>
-<instance part="GND44" gate="1" x="73.66" y="109.22"/>
-<instance part="GND45" gate="1" x="81.28" y="109.22"/>
-<instance part="GND46" gate="1" x="88.9" y="109.22"/>
-<instance part="GND47" gate="1" x="96.52" y="109.22"/>
 <instance part="P+23" gate="1" x="81.28" y="129.54"/>
 <instance part="P+24" gate="1" x="88.9" y="129.54"/>
 <instance part="P+25" gate="1" x="96.52" y="129.54"/>
@@ -7563,20 +7569,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="TP4" gate="G$1" x="25.4" y="127"/>
 <instance part="P+26" gate="1" x="20.32" y="132.08"/>
 <instance part="P+27" gate="1" x="15.24" y="132.08"/>
-<instance part="GND48" gate="1" x="30.48" y="127"/>
+<instance part="GND48" gate="VR1" x="30.48" y="127"/>
 <instance part="Q29" gate="G$1" x="22.86" y="22.86" rot="MR0"/>
 <instance part="Q30" gate="G$1" x="33.02" y="71.12" rot="MR0"/>
 <instance part="Q31" gate="G$1" x="17.78" y="78.74" rot="MR0"/>
-<instance part="GND49" gate="1" x="43.18" y="55.88"/>
-<instance part="GND50" gate="1" x="33.02" y="7.62"/>
 <instance part="C1" gate="G$1" x="73.66" y="93.98"/>
 <instance part="C2" gate="G$1" x="81.28" y="93.98"/>
 <instance part="C3" gate="G$1" x="88.9" y="93.98"/>
 <instance part="C4" gate="G$1" x="96.52" y="93.98"/>
-<instance part="GND51" gate="1" x="73.66" y="86.36"/>
-<instance part="GND52" gate="1" x="81.28" y="86.36"/>
-<instance part="GND53" gate="1" x="88.9" y="86.36"/>
-<instance part="GND54" gate="1" x="96.52" y="86.36"/>
 <instance part="P+28" gate="1" x="73.66" y="101.6"/>
 <instance part="P+29" gate="1" x="81.28" y="101.6"/>
 <instance part="P+30" gate="1" x="88.9" y="101.6"/>
@@ -7589,6 +7589,29 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="P+33" gate="1" x="363.22" y="106.68"/>
 <instance part="P+34" gate="1" x="363.22" y="71.12"/>
 <instance part="P+35" gate="1" x="363.22" y="35.56"/>
+<instance part="GND55" gate="1" x="45.72" y="127"/>
+<instance part="GND31" gate="1" x="22.86" y="7.62"/>
+<instance part="GND1" gate="1" x="33.02" y="7.62"/>
+<instance part="GND2" gate="1" x="10.16" y="35.56"/>
+<instance part="GND3" gate="1" x="17.78" y="55.88"/>
+<instance part="GND9" gate="1" x="33.02" y="55.88"/>
+<instance part="GND10" gate="1" x="-2.54" y="60.96"/>
+<instance part="GND28" gate="1" x="73.66" y="86.36"/>
+<instance part="GND29" gate="1" x="81.28" y="86.36"/>
+<instance part="GND30" gate="1" x="88.9" y="86.36"/>
+<instance part="GND35" gate="1" x="96.52" y="86.36"/>
+<instance part="GND44" gate="1" x="73.66" y="109.22"/>
+<instance part="GND45" gate="1" x="81.28" y="109.22"/>
+<instance part="GND46" gate="1" x="88.9" y="109.22"/>
+<instance part="GND47" gate="1" x="96.52" y="109.22"/>
+<instance part="GND49" gate="1" x="104.14" y="5.08"/>
+<instance part="GND50" gate="1" x="121.92" y="7.62"/>
+<instance part="GND51" gate="1" x="121.92" y="45.72"/>
+<instance part="GND52" gate="1" x="121.92" y="83.82"/>
+<instance part="GND53" gate="1" x="121.92" y="124.46"/>
+<instance part="GND54" gate="1" x="43.18" y="55.88"/>
+<instance part="R5" gate="G$1" x="38.1" y="129.54"/>
+<instance part="GND7" gate="1" x="96.52" y="68.58"/>
 </instances>
 <busses>
 <bus name="SIG[0..31]">
@@ -9123,197 +9146,193 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="96.52" y1="99.06" x2="96.52" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="GND" class="0">
-<segment>
-<pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="GND49" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R7" gate="G$1" pin="1"/>
-<pinref part="GND50" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="IC3" gate="A" pin="G"/>
-<pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="124.46" y1="50.8" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="50.8" x2="121.92" y2="48.26" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="A" pin="G"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="124.46" y1="88.9" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="88.9" x2="121.92" y2="86.36" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="A" pin="G"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="124.46" y1="129.54" x2="121.92" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="129.54" x2="121.92" y2="127" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="GND29" gate="1" pin="GND"/>
-<wire x1="10.16" y1="40.64" x2="10.16" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND28" gate="1" pin="GND"/>
-<wire x1="33.02" y1="58.42" x2="33.02" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="Q30" gate="G$1" pin="S"/>
-</segment>
-<segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<pinref part="GND30" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="88.9" y1="73.66" x2="96.52" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="73.66" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="20"/>
-</segment>
-<segment>
-<pinref part="GND9" gate="1" pin="GND"/>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="7.62" x2="104.14" y2="10.16" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="GND"/>
-<pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="-7.62" y1="66.04" x2="-2.54" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="66.04" x2="-2.54" y2="63.5" width="0.1524" layer="91"/>
-</segment>
+<net name="PWR_GND" class="0">
 <segment>
 <pinref part="Q6" gate="G$1" pin="S"/>
-<pinref part="GND4" gate="1" pin="GND"/>
+<pinref part="GND4" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q7" gate="G$1" pin="S"/>
-<pinref part="GND5" gate="1" pin="GND"/>
+<pinref part="GND5" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q8" gate="G$1" pin="S"/>
-<pinref part="GND6" gate="1" pin="GND"/>
+<pinref part="GND6" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q5" gate="G$1" pin="S"/>
-<pinref part="GND8" gate="1" pin="GND"/>
+<pinref part="GND8" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q4" gate="G$1" pin="S"/>
-<pinref part="GND11" gate="1" pin="GND"/>
+<pinref part="GND11" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q3" gate="G$1" pin="S"/>
-<pinref part="GND12" gate="1" pin="GND"/>
+<pinref part="GND12" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q2" gate="G$1" pin="S"/>
-<pinref part="GND13" gate="1" pin="GND"/>
+<pinref part="GND13" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q1" gate="G$1" pin="S"/>
-<pinref part="GND14" gate="1" pin="GND"/>
+<pinref part="GND14" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q14" gate="G$1" pin="S"/>
-<pinref part="GND15" gate="1" pin="GND"/>
+<pinref part="GND15" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q15" gate="G$1" pin="S"/>
-<pinref part="GND16" gate="1" pin="GND"/>
+<pinref part="GND16" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q16" gate="G$1" pin="S"/>
-<pinref part="GND17" gate="1" pin="GND"/>
+<pinref part="GND17" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q13" gate="G$1" pin="S"/>
-<pinref part="GND18" gate="1" pin="GND"/>
+<pinref part="GND18" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q12" gate="G$1" pin="S"/>
-<pinref part="GND19" gate="1" pin="GND"/>
+<pinref part="GND19" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q11" gate="G$1" pin="S"/>
-<pinref part="GND20" gate="1" pin="GND"/>
+<pinref part="GND20" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q10" gate="G$1" pin="S"/>
-<pinref part="GND21" gate="1" pin="GND"/>
+<pinref part="GND21" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q9" gate="G$1" pin="S"/>
-<pinref part="GND22" gate="1" pin="GND"/>
+<pinref part="GND22" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q22" gate="G$1" pin="S"/>
-<pinref part="GND23" gate="1" pin="GND"/>
+<pinref part="GND23" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q23" gate="G$1" pin="S"/>
-<pinref part="GND24" gate="1" pin="GND"/>
+<pinref part="GND24" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q24" gate="G$1" pin="S"/>
-<pinref part="GND25" gate="1" pin="GND"/>
+<pinref part="GND25" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q21" gate="G$1" pin="S"/>
-<pinref part="GND26" gate="1" pin="GND"/>
+<pinref part="GND26" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q20" gate="G$1" pin="S"/>
-<pinref part="GND27" gate="1" pin="GND"/>
+<pinref part="GND27" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q19" gate="G$1" pin="S"/>
-<pinref part="GND32" gate="1" pin="GND"/>
+<pinref part="GND32" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q18" gate="G$1" pin="S"/>
-<pinref part="GND33" gate="1" pin="GND"/>
+<pinref part="GND33" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q17" gate="G$1" pin="S"/>
-<pinref part="GND34" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="IC4" gate="A" pin="G"/>
-<pinref part="GND35" gate="1" pin="GND"/>
-<wire x1="121.92" y1="10.16" x2="121.92" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="12.7" x2="124.46" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="GND34" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q28" gate="B" pin="S"/>
-<pinref part="GND36" gate="1" pin="GND"/>
+<pinref part="GND36" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q28" gate="A" pin="S"/>
-<pinref part="GND37" gate="1" pin="GND"/>
+<pinref part="GND37" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q27" gate="B" pin="S"/>
-<pinref part="GND38" gate="1" pin="GND"/>
+<pinref part="GND38" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q27" gate="A" pin="S"/>
-<pinref part="GND39" gate="1" pin="GND"/>
+<pinref part="GND39" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q26" gate="B" pin="S"/>
-<pinref part="GND40" gate="1" pin="GND"/>
+<pinref part="GND40" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q26" gate="A" pin="S"/>
-<pinref part="GND41" gate="1" pin="GND"/>
+<pinref part="GND41" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q25" gate="B" pin="S"/>
-<pinref part="GND42" gate="1" pin="GND"/>
+<pinref part="GND42" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="Q25" gate="A" pin="S"/>
-<pinref part="GND43" gate="1" pin="GND"/>
+<pinref part="GND43" gate="VR1" pin="AGND"/>
+</segment>
+<segment>
+<pinref part="TP4" gate="G$1" pin="TP"/>
+<pinref part="GND48" gate="VR1" pin="AGND"/>
+<wire x1="25.4" y1="129.54" x2="30.48" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="129.54" x2="33.02" y2="129.54" width="0.1524" layer="91"/>
+<junction x="30.48" y="129.54"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="Q29" gate="G$1" pin="S"/>
+<wire x1="22.86" y1="10.16" x2="22.86" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="GND31" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="1"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="10.16" y1="40.64" x2="10.16" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="1"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="33.02" y1="58.42" x2="33.02" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="Q30" gate="G$1" pin="S"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<wire x1="-7.62" y1="66.04" x2="-2.54" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="66.04" x2="-2.54" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="GND28" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="GND29" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="GND30" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="GND35" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="P" pin="GND"/>
+<pinref part="GND44" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="P" pin="GND"/>
@@ -9328,34 +9347,48 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="GND47" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="P" pin="GND"/>
-<pinref part="GND44" gate="1" pin="GND"/>
+<pinref part="R9" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="7.62" x2="104.14" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="GND49" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="TP4" gate="G$1" pin="TP"/>
-<pinref part="GND48" gate="1" pin="GND"/>
-<wire x1="25.4" y1="129.54" x2="30.48" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="IC4" gate="A" pin="G"/>
+<wire x1="121.92" y1="10.16" x2="121.92" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="12.7" x2="124.46" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="GND50" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="GND31" gate="1" pin="GND"/>
-<pinref part="Q29" gate="G$1" pin="S"/>
-<wire x1="22.86" y1="10.16" x2="22.86" y2="17.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="IC3" gate="A" pin="G"/>
+<wire x1="124.46" y1="50.8" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="50.8" x2="121.92" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="GND51" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="IC2" gate="A" pin="G"/>
+<wire x1="124.46" y1="88.9" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="88.9" x2="121.92" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="GND52" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="IC1" gate="A" pin="G"/>
+<wire x1="124.46" y1="129.54" x2="121.92" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="129.54" x2="121.92" y2="127" width="0.1524" layer="91"/>
 <pinref part="GND53" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="GND54" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="GND55" gate="1" pin="GND"/>
+<wire x1="43.18" y1="129.54" x2="45.72" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="88.9" y1="73.66" x2="96.52" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="73.66" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="20"/>
+<pinref part="GND7" gate="1" pin="GND"/>
 </segment>
 </net>
 </nets>
